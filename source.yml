@@ -1,6 +1,49 @@
 name: cdff
 
+imports:
+    - github: rock-core/package_set
+
 version_control:
+    - cdff/CDFF:
+      spaceapp: InFuse/CDFF
+
     - cdff/external/cmake:
+      type: archive
       url: https://cmake.org/files/v3.10/cmake-3.10.1.tar.gz
+      
+    - cdff/external/opencv:
+      github: opencv/opencv
+      tag: 3.4.0
+      
+    - cdff/external/eigen:
+      github: RLovelett/eigen
+      tag: 3.3.4 
+      
+    - cdff/external/boost:
+      type: archive
+      url: https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+      
+    - cdff/external/flann:
+      github: mariusmuja/flann
+      tag: 1.9.1
+      
+    - cdff/external/qhull:
+      github: qhull/qhull
+      branch: master
+      
+    - cdff/external/tinyxml2:
+      github: leethomason/tinyxml2
+      tag: 6.0.0
+      
+    - cdff/external/yaml-cpp:
+      github: jbeder/yaml-cpp
+      tag: release-0.5.3
+    
+    - cdff/external/vtk:
+      github: Kitware/vtk
+      tag: v8.1.0
+      
+    - cdff/external/pcl:
+      github: PointCloudLibrary/pcl
+      tag: pcl-1.8.1
       

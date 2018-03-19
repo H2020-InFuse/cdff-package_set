@@ -1,0 +1,66 @@
+
+cmake_package "cdff/CDFF"
+
+
+
+cmake_package "cdff/external/opencv" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+    pkg.define 'WITH_FFMPEG','OFF'
+    pkg.define 'BUILD_DOCS','OFF'
+    pkg.define 'BUILD_EXAMPLES','OFF'
+    pkg.define 'BUILD_TESTS','OFF'
+    pkg.define 'ENABLE_CXX11','ON'
+    pkg.define 'ENABLE_FAST_MATH','ON'
+    pkg.define 'WITH_IPP','OFF'
+end
+
+cmake_package "cdff/external/cmake"
+
+cmake_package "cdff/external/eigen" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+end
+
+cmake_package "cdff/external/flann" do |pkg|
+    pkg.define "CMAKE_BUILD_TYPE","RELEASE"
+    pkg.define "BUILD_TESTS","OFF"
+    pkg.define "BUILD_EXAMPLES","OFF"
+end
+
+cmake_package "cdff/external/qhull" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+end
+
+cmake_package "cdff/external/tinyxml2" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+    pkg.define 'BUILD_TESTS','OFF'
+    pkg.define 'BUILD_TESTING','OFF'
+end
+
+cmake_package "cdff/external/yaml-cpp" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+end
+
+cmake_package "cdff/external/vtk" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+    pkg.define 'BUILD_TESTING','OFF'
+    pkg.define 'BUILD_EXAMPLES','OFF'
+    pkg.define 'BUILD_DOCUMENTATION','OFF'
+end
+
+cmake_package "cdff/external/yaml-cpp" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+end
+
+cmake_package "cdff/external/pcl" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+end
+
+
+
+
+
+
+
+
+
+
