@@ -1,0 +1,39 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b5ffafa..a16ad19 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -30,21 +30,21 @@ include_directories(
+     Common/Types/C/ASNCommon
+     Common/Types/C Common/Converters
+     Common/Types/Cpp
+-    External/install/include
+-    External/install/include/boost
+-    External/install/include/eigen3
+-    External/install/include/flann
+-    External/install/include/libqhull
+-    External/install/include/libqhullcpp
+-    External/install/include/libqhull_r
+-    External/install/include/opencv
+-    External/install/include/opencv2
+-    External/install/include/pcl-1.8
+-    External/install/include/vtk-8.1
+-    External/install/include/yaml-cpp
++    ${AUTOPROJ_CURRENT_ROOT}/install/include
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/boost
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/eigen3
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/flann
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhull
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhullcpp
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhull_r
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/opencv
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/opencv2
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/pcl-1.8
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/vtk-8.1
++    ${AUTOPROJ_CURRENT_ROOT}/install/include/yaml-cpp
+ )
+ link_directories(
+-	 External/install/lib
++	 ${AUTOPROJ_CURRENT_ROOT}/install/lib
+ )
+ 
+ add_subdirectory(Common)
