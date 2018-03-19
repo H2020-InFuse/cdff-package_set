@@ -1,0 +1,94 @@
+boost:
+    debian,ubuntu:
+        - libboost-dev
+        - libboost-graph-dev
+        - libboost-program-options-dev
+        - libboost-regex-dev
+        - libboost-thread-dev
+        - libboost-filesystem-dev
+        - libboost-iostreams-dev
+        - libboost-system-dev
+    gentoo: dev-libs/boost
+    fedora,opensuse: boost-devel
+    darwin: boost
+    arch,manjarolinux:
+        - boost
+        - boost-libs
+        
+        
+opencv:
+    debian: libopencv-dev
+    ubuntu:
+        '12.04': nonexistent
+        default: libopencv-dev
+    gentoo: media-libs/opencv
+    fedora: opencv-devel
+    arch,manjarolinux: opencv
+    macos-brew: opencv
+    macos-port: opencv
+    opensuse: opencv-devel
+
+cmake:
+  gentoo: dev-util/cmake
+  default: cmake
+  osdep: build-essential
+
+eigen3:
+    debian, ubuntu: libeigen3-dev
+    gentoo: dev-cpp/eigen
+    fedora: eigen3-devel
+    arch,manjarolinux: eigen3
+    darwin: eigen
+    opensuse: eigen3-devel
+    
+flann:
+    ubuntu:
+        '9.04,9.10,10.04,10.10,11.04,11.10': nonexistent
+        default: libflann-dev
+    debian: libflann-dev
+    arch,manjarolinux: ignore
+    
+qhull:
+    debian,ubuntu: libqhull-dev
+    fedora,opensuse: qhull-devel
+    
+external/tinyxml:
+    ubuntu:
+        '10.04,10.10,11.04,11.10': nonexistent
+        default: libtinyxml-dev
+    debian: libtinyxml-dev
+    opensuse: tinyxml-devel
+    
+yaml-cpp:
+    debian: libyaml-cpp-dev
+    ubuntu:
+        default: libyaml-cpp-dev
+
+vtk:
+    debian,ubuntu:
+        '14.04,14.10,15.04,15.10':
+            - libvtk5-dev
+            - tcl-vtk
+            - python-vtk
+            - libvtk-java
+        '16.04':
+            - libvtk6-dev
+            - tcl-vtk
+            - python-vtk6
+            - libvtk-java
+        default:
+            - libvtk6-dev
+            - tcl-vtk6
+            - python-vtk6
+            - libvtk6-java
+    fedora: [ vtk-devel, vtk-tcl, vtk-python, vtk-java ]
+    opensuse: [ vtk-devel, vtk-tcl, python-vtk, python-vtk-qt, vtk-java ]
+    
+slam/pcl:
+    ubuntu:
+        default: libpcl-dev
+        '12.04,12.10,13.04,13.10,14.04,14.10': nonexistent
+    debian:
+        default: libpcl-dev
+        wheezy,squeeze: nonexistent
+    

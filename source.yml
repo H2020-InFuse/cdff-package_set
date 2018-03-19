@@ -1,8 +1,5 @@
 name: cdff
 
-imports:
-    - github: rock-core/package_set
-
 version_control:
     - cdff/CDFF:
       spaceapp: InFuse/CDFF
