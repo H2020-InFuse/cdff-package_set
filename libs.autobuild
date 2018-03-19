@@ -1,7 +1,14 @@
 
 cmake_package "cdff/CDFF"
 
-
+import_package "cdff/external/boost" do |pkg|
+    pkg.post_install do
+        pkg.message "bootstrapping boost"
+        Autobuild::Subprocess.run(pkg, 'build', './bootstrap.sh', :working_directory => pkg.srcdir)
+        pkg.message "building boost, this may take a while"
+        Autobuild::Subprocess.run(pkg, 'build', "./b2 install --prefix=ENV['AUTOPROJ_CURRENT_ROOT']" + '/install', :working_directory => pkg.srcdir)
+    end
+end
 
 cmake_package "cdff/external/opencv" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
