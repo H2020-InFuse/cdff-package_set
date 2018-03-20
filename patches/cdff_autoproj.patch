@@ -1,8 +1,15 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b5ffafa..a16ad19 100644
+index b5ffafa..84f7778 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -30,21 +30,21 @@ include_directories(
+@@ -25,26 +25,28 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
+ #This policy disable warning for the use of relative libraries path
+ cmake_policy(SET CMP0015 NEW)
+ 
++set(INSTALL_PATH $ENV{AUTOPROJ_CURRENT_ROOT})
++
+ include_directories(
+     DFNs Common Tests Tools DFPCs
      Common/Types/C/ASNCommon
      Common/Types/C Common/Converters
      Common/Types/Cpp
@@ -18,22 +25,22 @@ index b5ffafa..a16ad19 100644
 -    External/install/include/pcl-1.8
 -    External/install/include/vtk-8.1
 -    External/install/include/yaml-cpp
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/boost
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/eigen3
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/flann
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhull
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhullcpp
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhull_r
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/opencv
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/opencv2
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/pcl-1.8
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/vtk-8.1
-+    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/yaml-cpp
++    ${INSTALL_PATH}/install/include
++    ${INSTALL_PATH}/install/include/boost
++    ${INSTALL_PATH}/install/include/eigen3
++    ${INSTALL_PATH}/install/include/flann
++    ${INSTALL_PATH}/install/include/libqhull
++    ${INSTALL_PATH}/install/include/libqhullcpp
++    ${INSTALL_PATH}/install/include/libqhull_r
++    ${INSTALL_PATH}/install/include/opencv
++    ${INSTALL_PATH}/install/include/opencv2
++    ${INSTALL_PATH}/install/include/pcl-1.8
++    ${INSTALL_PATH}/install/include/vtk-8.1
++    ${INSTALL_PATH}/install/include/yaml-cpp
  )
  link_directories(
 -	 External/install/lib
-+	 $ENV{AUTOPROJ_CURRENT_ROOT}/install/lib
++	 ${INSTALL_PATH}/install/lib
  )
  
  add_subdirectory(Common)
