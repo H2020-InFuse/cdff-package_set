@@ -1,0 +1,12 @@
+<package>
+  <description brief="CDFF"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <depend package="flann" />
+  <tags>stable</tags>
+</package>
+
+
+
