@@ -18,22 +18,22 @@ index b5ffafa..a16ad19 100644
 -    External/install/include/pcl-1.8
 -    External/install/include/vtk-8.1
 -    External/install/include/yaml-cpp
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/boost
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/eigen3
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/flann
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhull
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhullcpp
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/libqhull_r
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/opencv
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/opencv2
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/pcl-1.8
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/vtk-8.1
-+    ${AUTOPROJ_CURRENT_ROOT}/install/include/yaml-cpp
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/boost
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/eigen3
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/flann
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhull
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhullcpp
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/libqhull_r
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/opencv
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/opencv2
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/pcl-1.8
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/vtk-8.1
++    $ENV{AUTOPROJ_CURRENT_ROOT}/install/include/yaml-cpp
  )
  link_directories(
 -	 External/install/lib
-+	 ${AUTOPROJ_CURRENT_ROOT}/install/lib
++	 $ENV{AUTOPROJ_CURRENT_ROOT}/install/lib
  )
  
  add_subdirectory(Common)
