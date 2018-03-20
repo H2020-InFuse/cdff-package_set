@@ -1,0 +1,16 @@
+<package>
+  <description brief="CDFF"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="boost" />
+  <depend package="cmake" />
+  <depend package="eigen3" />
+  <depend package="flann" />
+  <depend package="qhull" />
+  <depend package="vtk" />
+  <tags>stable</tags>
+</package>
+
+
+
