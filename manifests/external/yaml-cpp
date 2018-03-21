@@ -1,0 +1,11 @@
+<package>
+  <description brief="yaml-cpp"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="boost" />
+  <tags>stable</tags>
+</package>
+
+
+
