@@ -15,7 +15,7 @@ version_control:
       tag: 3.4.0
       
     - cdff/external/eigen:
-      github: RLovelett/eigen
+      github: eigenteam/eigen-git-mirror
       tag: 3.3.4 
       
     - cdff/external/boost:
