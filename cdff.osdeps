@@ -91,4 +91,7 @@ slam/pcl:
     debian:
         default: libpcl-dev
         wheezy,squeeze: nonexistent
-    
+
+opengl:
+    ubuntu: 
+        default: freeglut3-dev

@@ -1,0 +1,11 @@
+<package>
+  <description brief="CDFF"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="opengl" />
+  <tags>stable</tags>
+</package>
+
+
+
