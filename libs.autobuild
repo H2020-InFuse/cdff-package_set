@@ -7,6 +7,7 @@ import_package "cdff/external/boost" do |pkg|
         Autobuild::Subprocess.run(pkg, 'build', './bootstrap.sh', :working_directory => pkg.srcdir)
         pkg.message "building boost, this may take a while"
         Autobuild::Subprocess.run(pkg, 'build', "./b2 install --prefix=ENV['AUTOPROJ_CURRENT_ROOT']" + '/install', :working_directory => pkg.srcdir)
+        pkg.message "boost installed"
     end
 end
 
