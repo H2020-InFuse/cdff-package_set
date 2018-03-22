@@ -9,6 +9,7 @@
   <depend package="flann" />
   <depend package="qhull" />
   <depend package="vtk" />
+  <depend package="proj" />
   <tags>stable</tags>
 </package>
 

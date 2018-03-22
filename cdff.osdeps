@@ -95,3 +95,18 @@ slam/pcl:
 opengl:
     ubuntu: 
         default: freeglut3-dev
+
+
+
+proj:
+    debian,ubuntu: libproj-dev
+    gentoo: sci-libs/proj
+    fedora: proj-devel
+    arch,manjarolinux: proj
+    opensuse: [proj, libproj-devel]
+
+
+
+
+
+
