@@ -5,6 +5,7 @@
   <url></url>
   <depend package="cmake" />
   <depend package="flann" />
+  <depend package="eigen3" />
   <tags>stable</tags>
 </package>
 
