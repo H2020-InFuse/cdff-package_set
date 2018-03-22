@@ -6,7 +6,7 @@ Autoproj.add_osdeps_overrides 'eigen3', :package => 'cdff/external/eigen', :forc
 #Autoproj.add_osdeps_overrides 'qhull', :package => 'cdff/external/qhull', :force => true
 #Autoproj.add_osdeps_overrides 'external/tinyxml', :package => 'cdff/external/tinyxml2', :force => true
 #Autoproj.add_osdeps_overrides 'yaml-cpp', :package => 'cdff/external/yaml-cpp', :force => true
-#Autoproj.add_osdeps_overrides 'vtk', :package => 'cdff/external/vtk', :force => true
+Autoproj.add_osdeps_overrides 'vtk', :package => 'cdff/external/vtk', :force => true
 #Autoproj.add_osdeps_overrides 'slam/pcl', :package => 'cdff/external/pcl', :force => true
 
 #Autobuild::Package['cdff/CDFF'].define "CMAKE_C_COMPILER", "gcc-6"
