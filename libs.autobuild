@@ -1,3 +1,5 @@
+# this file defiens how packages are build and which build tool and flags are used
+# it is evaluated as ruby code
 
 cmake_package "cdff/CDFF" do |pkg|
     pkg.define 'USE_BUNDLED_DEPENDENCIES', 'ON'

@@ -1,5 +1,10 @@
+#this is the files which defined where to obtain the source code
+# syntax is YAML
+
+#the name this package set is represented in autoproj/remotes folder
 name: cdff
 
+# source definitions
 version_control:
     - cdff/CDFF:
       spaceapp: InFuse/CDFF

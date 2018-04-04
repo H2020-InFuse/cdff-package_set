@@ -1,4 +1,6 @@
+#this file is ruby code, evaluated before reading package_sets
 
+#setup git server locations (gitlab/github) in case the buildconf does not include them
 require 'autoproj/git_server_configuration'
 if !Autoproj.has_source_handler? 'github'
     Autoproj.git_server_configuration('GITHUB', 'github.com', :http_url => 'https://github.com')
@@ -9,14 +11,17 @@ if !Autoproj.has_source_handler? 'spaceapp'
 end
 
 
+#create a config value whether all code should be read from source
 configuration_option('CDFF_EXTERNAL_SOURCE_INSTALL', 'string',
     :default => 'all',
     :possible_values => ['all', 'required', 'none'],
     :doc => [
-        "Which packages should be installed from source?",
-        "'all' will install all external packages from source",
-        "'required' will only install some packages from source (needed based on ubuntu 16.04)",
-        "'none' will not install source dependencies (they can be installed manually using 'amake cdff/external/PACKAGE')"])
+                "Which packages should be installed from source?",
+                "'all' will install all external packages from source",
+                "'required' will only install some packages from source (needed based on ubuntu 16.04)",
+                "'none' will not install source dependencies (they can be installed manually using 'amake cdff/external/PACKAGE')"
+            ]
+    )
 
 
 
