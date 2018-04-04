@@ -1,5 +1,8 @@
 
-cmake_package "cdff/CDFF"
+cmake_package "cdff/CDFF" do |pkg|
+    pkg.define 'USE_BUNDLED_DEPENDENCIES', 'ON'
+    pkg.define 'BUNDLED_DEPENDENCIES_PREFIX', ENV["AUTOPROJ_CURRENT_ROOT"]+"/install"
+end
 
 import_package "cdff/external/boost" do |pkg|
     pkg.post_install do
@@ -20,6 +23,7 @@ cmake_package "cdff/external/opencv" do |pkg|
     pkg.define 'ENABLE_CXX11','ON'
     pkg.define 'ENABLE_FAST_MATH','ON'
     pkg.define 'WITH_IPP','OFF'
+    pkg.define 'WITH_VTK','OFF'
 end
 
 cmake_package "cdff/external/cmake"

@@ -9,3 +9,14 @@ if !Autoproj.has_source_handler? 'spaceapp'
 end
 
 
+configuration_option('CDFF_EXTERNAL_SOURCE_INSTALL', 'string',
+    :default => 'all',
+    :possible_values => ['all', 'required', 'none'],
+    :doc => [
+        "Which packages should be installed from source?",
+        "'all' will install all external packages from source",
+        "'required' will only install some packages from source (needed based on ubuntu 16.04)",
+        "'none' will not install source dependencies (they can be installed manually using 'amake cdff/external/PACKAGE')"])
+
+
+
