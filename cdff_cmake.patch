@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c2070de..8511a95 100644
+index c2070de..1fc79f1 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -83,14 +83,14 @@ endif()
@@ -19,3 +19,29 @@ index c2070de..8511a95 100644
  
  endif()
  
+@@ -142,7 +142,7 @@ endmacro()
+ # CMake will look for the headers and the requested compiled libraries, as well
+ # as the compiled libraries they depend on.
+ 
+-find_package(Boost 1.66.0 REQUIRED COMPONENTS system)
++find_package(Boost REQUIRED COMPONENTS system)
+ 
+ if(Boost_FOUND)
+ 
+@@ -238,13 +238,13 @@ include_directories(
+ 
+ # TODO: rework this section
+ 
+-find_package(VTK 8.1.0 REQUIRED NAMES VTK VTK-8.1 CONFIGS VTKConfig.cmake)
++find_package(VTK REQUIRED NAMES VTK VTK-8.1 CONFIGS VTKConfig.cmake)
+ find_package_mode(VTK)
+ 
+-find_package(PCL 1.8.1 REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
++find_package(PCL REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
+ find_package_mode(PCL)
+ 
+-find_package(OpenCV 3.4.0 REQUIRED)
++find_package(OpenCV REQUIRED)
+ find_package_mode(OpenCV)
+ 
+ include_directories(
