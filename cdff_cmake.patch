@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index c2070de..1fc79f1 100644
+index c2070de..1e10540 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -83,14 +83,14 @@ endif()
@@ -28,16 +28,31 @@ index c2070de..1fc79f1 100644
  
  if(Boost_FOUND)
  
-@@ -238,13 +238,13 @@ include_directories(
+@@ -219,6 +219,7 @@ endif()
+ # TODO: remove, use imported target Eigen3::Eigen instead
+ include_directories(
+   "${_DEPENDENCIES_PREFIX}/include/eigen3"
++  "/usr/include/eigen3"
+ )
+ 
+ ## Don't look for FLANN, QHull, yaml-cpp ---------------------------------------
+@@ -232,23 +233,26 @@ include_directories(
+ 
+ include_directories(
+   "${_DEPENDENCIES_PREFIX}/include"
++  "/usr/include"
+ )
+ 
+ ## Look for VTK, PCL, OpenCV ---------------------------------------------------
  
  # TODO: rework this section
  
 -find_package(VTK 8.1.0 REQUIRED NAMES VTK VTK-8.1 CONFIGS VTKConfig.cmake)
-+find_package(VTK REQUIRED NAMES VTK VTK-8.1 CONFIGS VTKConfig.cmake)
++find_package(VTK REQUIRED NAMES VTK CONFIGS VTKConfig.cmake)
  find_package_mode(VTK)
  
 -find_package(PCL 1.8.1 REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
-+find_package(PCL REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
++find_package(PCL REQUIRED NAMES PCL CONFIGS PCLConfig.cmake)
  find_package_mode(PCL)
  
 -find_package(OpenCV 3.4.0 REQUIRED)
@@ -45,3 +60,17 @@ index c2070de..1fc79f1 100644
  find_package_mode(OpenCV)
  
  include_directories(
+   "${_DEPENDENCIES_PREFIX}/include/pcl-1.8"
++  "/usr/include/pcl-1.8"
++  "/usr/include/pcl-1.7"
+ )
+ 
+ ## Dependencies: compiled libraries --------------------------------------------
+@@ -261,6 +265,7 @@ include_directories(
+ 
+ link_directories(
+   "${_DEPENDENCIES_PREFIX}/lib"
++  "/usr/lib"
+ )
+ 
+ ## CDFF ------------------------------------------------------------------------
