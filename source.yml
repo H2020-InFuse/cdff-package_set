@@ -3,8 +3,8 @@ name: cdff
 version_control:
     - cdff/CDFF:
       spaceapp: InFuse/CDFF
-#      patches: 
-#        - [$AUTOPROJ_SOURCE_DIR/patches/cdff_autoproj.patch, 1]
+      patches: 
+        - [$AUTOPROJ_SOURCE_DIR/cdff_cmake.patch, 1]
 
     - cdff/external/cmake:
       type: archive
