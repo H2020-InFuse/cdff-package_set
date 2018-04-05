@@ -105,7 +105,8 @@ proj:
     arch,manjarolinux: proj
     opensuse: [proj, libproj-devel]
 
-
+curl:
+    debian,ubuntu: curl
 
 
 
