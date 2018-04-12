@@ -12,7 +12,7 @@ version_control:
         - [$AUTOPROJ_SOURCE_DIR/cdff_cmake.patch, 1]
 
     - cdff/CDFF_dev:
-      spaceapp: InFuse/CDFF
+      spaceapp: InFuse/CDFF_dev
 
     - cdff/external/cmake:
       type: archive
