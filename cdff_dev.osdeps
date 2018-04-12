@@ -1,0 +1,25 @@
+python3:
+    debian,ubuntu:
+        - python3
+    opensuse:
+        - python3
+
+python3-pip:
+    debian,ubuntu:
+        - python3-pip
+    opensuse:
+        - python3-pip
+
+python3-dev:
+    debian,ubuntu:
+        - python3-dev
+    opensuse:
+        - python3-dev
+
+pyyaml: pip
+jinja2: pip
+cython: pip
+numpy: pip
+msgpack-python: pip
+pydot: pip
+pandas: pip
