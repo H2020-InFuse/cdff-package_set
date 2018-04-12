@@ -1,8 +1,8 @@
 #this file is ruby code, evaluated before reading package_sets
 
 #we use Python 3!
-system('ln -s /usr/bin/python3 $AUTOPROJ_CURRENT_ROOT/install/bin/python')
-system('ln -s /usr/bin/pip3 $AUTOPROJ_CURRENT_ROOT/install/bin/pip')
+Autoproj.create_symlink('/usr/bin/python3", "$AUTOPROJ_CURRENT_ROOT/install/bin/python')
+Autoproj.create_symlink('/usr/bin/pip3", "$AUTOPROJ_CURRENT_ROOT/install/bin/pip')
 
 #setup git server locations (gitlab/github) in case the buildconf does not include them
 require 'autoproj/git_server_configuration'
