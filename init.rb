@@ -1,5 +1,9 @@
 #this file is ruby code, evaluated before reading package_sets
 
+#we use Python 3!
+system('ln -s /usr/bin/python3 $AUTOPROJ_CURRENT_ROOT/python')
+system('ln -s /usr/bin/pip3 $AUTOPROJ_CURRENT_ROOT/pip')
+
 #setup git server locations (gitlab/github) in case the buildconf does not include them
 require 'autoproj/git_server_configuration'
 if !Autoproj.has_source_handler? 'github'
