@@ -1,0 +1,13 @@
+diff --git a/2d/CMakeLists.txt b/2d/CMakeLists.txt
+index afaa99846..2e7df88ee 100644
+--- a/2d/CMakeLists.txt
++++ b/2d/CMakeLists.txt
+@@ -38,5 +38,7 @@ if(build)
+     #Install include files
+     PCL_ADD_INCLUDES("${SUBSYS_NAME}" "${SUBSYS_NAME}" ${incs})
+     PCL_ADD_INCLUDES("${SUBSYS_NAME}" "${SUBSYS_NAME}/impl" ${impl_incs})
+-    
++
++    set(LIB_NAME "pcl_${SUBSYS_NAME}")
++    PCL_MAKE_PKGCONFIG("${LIB_NAME}" "${SUBSYS_NAME}" "${SUBSYS_DESC}" "${SUBSYS_DEPS}" "" "" "" "")
+ endif(build)
