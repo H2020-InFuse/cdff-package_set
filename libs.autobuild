@@ -70,6 +70,21 @@ cmake_package "cdff/external/pcl" do |pkg|
 end
 
 
+def python_package(name, relative_setup_location: "")
+    package_common(:import, name) do |pkg|
+        pkg.depends_on "python"
+        pkg.post_install do
+            pkg.message "installing Python library #{name}"
+            Autobuild::Subprocess.run(
+                pkg, "install",
+                "python3 setup.py install --prefix ${AUTOPROJ_CURRENT_ROOT}/install",
+                :working_directory => pkg.srcdir + "/" + relative_setup_location)
+        end
+        yield(pkg) if block_given?
+    end
+end
+
+python_package "cdff/CDFF_dev"
 
 
 
