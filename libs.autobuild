@@ -72,7 +72,7 @@ end
 
 def python_package(name, relative_setup_location: "")
     package_common(:import, name) do |pkg|
-        pkg.depends_on "python"
+        pkg.depends_on "python3"
         pkg.post_install do
             pkg.message "installing Python library #{name}"
             Autobuild::Subprocess.run(
