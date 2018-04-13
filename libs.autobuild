@@ -87,11 +87,17 @@ def python_package(name, relative_setup_location: "", &configure)
     end
 end
 
-python_package "cdff/CDFF_dev" do
-    # write configuration file for CDFF_dev
-    cdffpath = File.open(Autoproj.default_find_base_dir + "/cdff/CDFF_dev/cdffpath", "w")
-    cdffpath << "../CDFF"
-    cdffpath.close
+python_package "cdff/CDFF_dev" do |pkg|
+#    Autoproj.message("pkg: #{pkg}")
+#TODO: why can pkg be nil?
+    unless pkg.nil? ||
+    pkg.post_import do
+        # write configuration file for CDFF_dev
+        cdffpath = File.open(Autoproj.default_find_base_dir + "/cdff/CDFF_dev/cdffpath", "w")
+        cdffpath << "../CDFF"
+        cdffpath.close
+    end
+    end
 end
 
 
