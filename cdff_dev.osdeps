@@ -16,6 +16,10 @@ python3-dev:
     opensuse:
         - python3-dev
 
+graphviz:
+    debian,ubuntu:
+        - libgraphviz-dev
+
 pyyaml: pip
 jinja2: pip
 cython: pip
