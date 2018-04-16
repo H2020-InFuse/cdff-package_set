@@ -18,7 +18,7 @@ python3-dev:
 
 graphviz:
     debian,ubuntu:
-        - libgraphviz-dev
+        - graphviz
 
 pyyaml: pip
 jinja2: pip
