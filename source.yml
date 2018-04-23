@@ -4,6 +4,11 @@
 #the name this package set is represented in autoproj/remotes folder
 name: cdff
 
+#import external package sets
+imports:
+  - github: envire/envire-package_set
+  - github: rock-core/rock-package_set
+
 # source definitions
 version_control:
     - cdff/CDFF:
