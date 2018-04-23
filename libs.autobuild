@@ -61,10 +61,6 @@ cmake_package "cdff/external/vtk" do |pkg|
     pkg.define 'BUILD_DOCUMENTATION','OFF'
 end
 
-cmake_package "cdff/external/yaml-cpp" do |pkg|
-    pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
-end
-
 cmake_package "cdff/external/pcl" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
 end
