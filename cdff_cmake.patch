@@ -7,7 +7,7 @@ index 84f0e8c..c3c4f73 100644
  
    set(CMAKE_MODULE_PATH
 -    "${PROJECT_SOURCE_DIR}/${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.11.0-rc4/Modules")
-+    "${PROJECT_SOURCE_DIR}/${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.10/Modules")
++    "${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.10/Modules")
  
  else()
  
