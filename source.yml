@@ -8,6 +8,7 @@ name: cdff
 imports:
   - github: envire/envire-package_set
   - github: rock-core/rock-package_set
+  - github: ESROCOS/package_set-core
 
 # source definitions
 version_control:
