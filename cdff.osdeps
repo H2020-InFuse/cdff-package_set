@@ -108,6 +108,11 @@ proj:
 curl:
     debian,ubuntu: curl
 
+mono:
+    debian,ubuntu: mono-runtime
+
+mono-numerics:
+    debian,ubuntu: libmono-system-numerics4.0-cil
 
 
 

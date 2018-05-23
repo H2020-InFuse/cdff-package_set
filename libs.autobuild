@@ -1,6 +1,17 @@
 # this file defiens how packages are build and which build tool and flags are used
 # it is evaluated as ruby code
 
+move_package "tools/workflow", "esrocos/tools"
+move_package "tools/config", "esrocos/tools"
+move_package "types/base", "esrocos/types"
+move_package "types/base_support", "esrocos/types"
+
+import_package "tools/asn1scc" do |pkg|
+   pkg.depends_on "mono"
+   pkg.depends_on "mono-numerics"
+end
+
+
 cmake_package "cdff/CDFF" do |pkg|
     pkg.define 'USE_BUNDLED_DEPENDENCIES', 'ON'
     pkg.define 'BUNDLED_DEPENDENCIES_PREFIX', ENV["AUTOPROJ_CURRENT_ROOT"]+"/install"

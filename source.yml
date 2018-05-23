@@ -19,6 +19,10 @@ version_control:
     - cdff/CDFF_dev:
       spaceapp: InFuse/CDFF_dev
 
+    - tools/asn1scc:
+      type: archive
+      url: https://download.tuxfamily.org/taste/ASN1SCC/ASN1SCC-latest.tgz
+
     - cdff/external/cmake:
       type: archive
       url: https://cmake.org/files/v3.10/cmake-3.10.1.tar.gz
