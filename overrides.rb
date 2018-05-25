@@ -5,7 +5,7 @@
 
 #dependent packages
 if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') then
-    Autoproj.add_osdeps_overrides 'cmake', :package => 'cdff/external/cmake', :force => true
+#    Autoproj.add_osdeps_overrides 'cmake', :package => 'cdff/external/cmake', :force => true
     Autoproj.add_osdeps_overrides 'qhull', :package => 'cdff/external/qhull', :force => true
     Autoproj.add_osdeps_overrides 'external/tinyxml', :package => 'cdff/external/tinyxml2', :force => true
     Autoproj.add_osdeps_overrides 'yaml-cpp', :package => 'cdff/external/yaml-cpp', :force => true
