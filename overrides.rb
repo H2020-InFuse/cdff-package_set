@@ -21,5 +21,6 @@ if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') || (Autoproj.
 end
 
 Autobuild::Package['types/base'].define "ASN1_COMPILER", "/home/dfki.uni-bremen.de/planthaber/dfki/rock/cdff_pure/tools/asn1scc/asn1.exe"
+Autobuild::Package['types/base'].depends_on "tools/asn1scc"
 Autobuild::Package['types/base_support'].define "ASN1_COMPILER", "/home/dfki.uni-bremen.de/planthaber/dfki/rock/cdff_pure/tools/asn1scc/asn1.exe"
 
