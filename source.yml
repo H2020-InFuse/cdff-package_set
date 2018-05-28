@@ -63,6 +63,6 @@ version_control:
     - cdff/external/pcl:
       github: PointCloudLibrary/pcl
       tag: pcl-1.8.1
-#      patches: 
-#        - [$AUTOPROJ_SOURCE_DIR/pcl_pkgconfig.patch, 1]
+      patches: 
+        - [$AUTOPROJ_SOURCE_DIR/pcl_pkgconfig.patch, 1]
       
