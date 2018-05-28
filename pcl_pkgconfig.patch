@@ -1,5 +1,5 @@
 diff --git a/2d/CMakeLists.txt b/2d/CMakeLists.txt
-index afaa99846..2e7df88ee 100644
+index afaa998..154b487 100644
 --- a/2d/CMakeLists.txt
 +++ b/2d/CMakeLists.txt
 @@ -38,5 +38,7 @@ if(build)
@@ -9,5 +9,5 @@ index afaa99846..2e7df88ee 100644
 -    
 +
 +    set(LIB_NAME "pcl_${SUBSYS_NAME}")
-+    PCL_MAKE_PKGCONFIG("${LIB_NAME}" "${SUBSYS_NAME}" "${SUBSYS_DESC}" "${SUBSYS_DEPS}" "" "" "" "")
++    PCL_MAKE_PKGCONFIG_HEADER_ONLY("${LIB_NAME}" "${SUBSYS_NAME}" "${SUBSYS_DESC}" "${SUBSYS_DEPS}" "" "" "" "")
  endif(build)
