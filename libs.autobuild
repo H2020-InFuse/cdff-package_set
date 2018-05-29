@@ -26,8 +26,8 @@ import_package "cdff/external/boost" do |pkg|
         Autobuild::Subprocess.run(pkg, 'build', './b2 install --prefix=' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install', :working_directory => pkg.srcdir)
         pkg.message "boost installed"
         pkg.message "updating FindBoost Module in #{pkg.prefix}/share/cmake-3.11.0-rc4/Modules"
-	Autobuild::Subprocess.run(pkg, 'build', 'mkdir -p share/cmake-3.11.0-rc4/Modules', :working_directory => pkg.prefix)
-        Autobuild::Subprocess.run(pkg, 'build', 'curl https://gitlab.kitware.com/cmake/cmake/raw/v3.11.0-rc4/Modules/FindBoost.cmake > FindBoost.cmake', :working_directory => pkg.prefix + "share/cmake-3.11.0-rc4/Modules")
+        Autobuild::Subprocess.run(pkg, 'build', 'mkdir -p share/cmake-3.11.0-rc4/Modules', :working_directory => pkg.prefix)
+        Autobuild::Subprocess.run(pkg, 'build', 'curl https://gitlab.kitware.com/cmake/cmake/raw/v3.11.0-rc4/Modules/FindBoost.cmake > FindBoost.cmake', :working_directory => pkg.prefix + "/share/cmake-3.11.0-rc4/Modules")
         pkg.message "updated FindBoost Module"
     end
 end
