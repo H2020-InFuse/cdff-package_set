@@ -114,6 +114,10 @@ mono:
 mono-numerics:
     debian,ubuntu: libmono-system-numerics4.0-cil
 
+mono-system-core:
+    debian,ubuntu: libmono-system-core4.0-cil
+
+
 graphviz:
     debian,ubuntu: [ graphviz, graphviz-dev ]
     gentoo: graphviz
