@@ -12,11 +12,11 @@ if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') then
     Autoproj.add_osdeps_overrides 'flann', :package => 'cdff/external/flann', :force => true
     Autoproj.add_osdeps_overrides 'vtk', :package => 'cdff/external/vtk', :force => true    
     Autoproj.add_osdeps_overrides 'eigen3', :package => 'cdff/external/eigen', :force => true
+    Autoproj.add_osdeps_overrides 'boost', :package => 'cdff/external/boost', :force => true
 end
 
 #required packages (newer versions than Ubuntu 16.04 needed), ubuntu 17.10 needs none
 if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') || (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'required') then
-     Autoproj.add_osdeps_overrides 'boost', :package => 'cdff/external/boost', :force => true
      Autoproj.add_osdeps_overrides 'opencv', :package => 'cdff/external/opencv', :force => true
      Autoproj.add_osdeps_overrides 'slam/pcl', :package => 'cdff/external/pcl', :force => true   
 end
