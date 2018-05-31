@@ -9,6 +9,7 @@ move_package "types/base_support", "esrocos/types"
 import_package "tools/asn1scc" do |pkg|
    pkg.depends_on "mono"
    pkg.depends_on "mono-numerics"
+   pkg.depends_on "mono-system-core"
 end
 
 
