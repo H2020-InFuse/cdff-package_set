@@ -72,6 +72,7 @@ cmake_package "cdff/external/yaml-cpp" do |pkg|
     pkg.define "BUILD_SHARED_LIBS","ON"
     pkg.disable_doc # the package has documentation generation target
 end
+
 cmake_package "cdff/external/vtk" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
     pkg.define 'BUILD_TESTING','OFF'
