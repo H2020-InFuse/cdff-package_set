@@ -5,6 +5,8 @@ move_package "tools/workflow", "esrocos/tools"
 move_package "tools/config", "esrocos/tools"
 move_package "types/base", "esrocos/types"
 move_package "types/base_support", "esrocos/types"
+move_package "types/sensor_samples", "esrocos/types"
+move_package "types/sensor_samples_support", "esrocos/types"
 
 import_package "tools/asn1scc" do |pkg|
    pkg.depends_on "mono"
