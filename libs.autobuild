@@ -5,6 +5,8 @@ move_package "tools/workflow", "esrocos/tools"
 move_package "tools/config", "esrocos/tools"
 move_package "types/base", "esrocos/types"
 move_package "types/base_support", "esrocos/types"
+move_package "types/sensor_samples", "esrocos/types"
+move_package "types/sensor_samples_support", "esrocos/types"
 
 import_package "tools/asn1scc" do |pkg|
    pkg.depends_on "mono"
@@ -69,6 +71,8 @@ end
 
 cmake_package "cdff/external/yaml-cpp" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
+    pkg.define "BUILD_SHARED_LIBS","ON"
+    pkg.disable_doc # the package has documentation generation target
 end
 
 cmake_package "cdff/external/vtk" do |pkg|
