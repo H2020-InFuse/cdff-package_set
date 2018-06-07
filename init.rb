@@ -4,7 +4,7 @@
 Autoproj.create_symlink('/usr/bin/python3', "#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/bin/python")
 Autoproj.create_symlink('/usr/bin/pip3', "#{ENV['AUTOPROJ_CURRENT_ROOT']}/install/bin/pip")
 
-python_version = %x{python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))'}[0..2]
+python_version = %x{python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))'}[0..2]
 Autobuild.env_add_path(
     'PYTHONPATH',
     '${AUTOPROJ_CURRENT_ROOT}/install/lib/python' + python_version + '/site-packages/'
