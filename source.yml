@@ -65,4 +65,11 @@ version_control:
       tag: pcl-1.8.1
       patches: 
         - [$AUTOPROJ_SOURCE_DIR/pcl_pkgconfig.patch, 1]
-      
+
+    - types/sensor_samples:
+      github: ESROCOS/types-sensor_samples
+      branch: master
+
+    - types/sensor_samples_support:
+      github: ESROCOS/types-sensor_samples_support
+      branch: master
