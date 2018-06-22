@@ -10,6 +10,15 @@ imports:
   - github: rock-core/rock-package_set
   - github: ESROCOS/package_set-core
 
+overrides:
+- types/base_support:
+  github: H2020-InFuse/types-base_support
+  branch: types-base_support_old
+
+- types/sensor_samples_support:
+  github: H2020-InFuse/types-sensor_samples_support
+  branch: types-sensor_samples_support_old
+
 # source definitions
 version_control:
     - cdff/CDFF:
