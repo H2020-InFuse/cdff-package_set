@@ -1,12 +1,12 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 84f0e8c..c3c4f73 100644
+index b1ed8ec..1f8f36a 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -84,7 +84,7 @@ endif()
  if(USE_BUNDLED_DEPENDENCIES)
  
    set(CMAKE_MODULE_PATH
--    "${PROJECT_SOURCE_DIR}/${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.11.0-rc4/Modules")
+-    "${PROJECT_SOURCE_DIR}/${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.11.4/Modules")
 +    "${BUNDLED_DEPENDENCIES_PREFIX}/share/cmake-3.11.0-rc4/Modules")
  
  else()
@@ -20,15 +20,15 @@ index 84f0e8c..c3c4f73 100644
  
  if(Boost_FOUND)
  
-@@ -220,6 +220,7 @@ endif()
+@@ -224,6 +224,7 @@ endif()
  # TODO: remove, use imported target Eigen3::Eigen instead
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include/eigen3"
 +  "/usr/include/eigen3"
  )
  
- ## Don't look for FLANN, QHull, yaml-cpp ---------------------------------------
-@@ -233,19 +234,20 @@ include_directories(
+ ## Look for Ceres --------------------------------------------------------------
+@@ -280,19 +281,20 @@ endif()
  
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include"
@@ -52,7 +52,7 @@ index 84f0e8c..c3c4f73 100644
  find_package_mode(OpenCV)
  
  include_directories(
-@@ -262,6 +264,7 @@ include_directories(
+@@ -309,6 +311,7 @@ include_directories(
  
  link_directories(
    "${_DEPENDENCIES_PREFIX}/lib"
