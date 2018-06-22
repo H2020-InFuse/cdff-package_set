@@ -73,3 +73,7 @@ version_control:
     - types/sensor_samples_support:
       github: ESROCOS/types-sensor_samples_support
       branch: master
+
+    - cdff/external/ceres-solver:
+      github: ceres-solver/ceres-solver
+      tag: 1.14.0

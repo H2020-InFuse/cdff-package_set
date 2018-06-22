@@ -89,6 +89,12 @@ cmake_package "cdff/external/pcl" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
 end
 
+cmake_package "cdff/external/ceres-solver" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'RELEASE'
+    pkg.define 'BUILD_SHARED_LIBS', 'ON'
+    pkg.define 'BUILD_TESTING', 'OFF'
+    pkg.define 'BUILD_EXAMPLES', 'OFF'
+end
 
 def python_package(name, relative_setup_location: "", &configure)
     package_common(:import, name) do |pkg|
