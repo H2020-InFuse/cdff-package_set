@@ -125,3 +125,13 @@ graphviz:
     arch,manjarolinux: graphviz
     opensuse: graphviz-devel
 
+
+google-glog-dev:
+    debian,ubuntu: libgoogle-glog-dev
+
+atlas-base-dev:
+    debian,ubuntu: libatlas-base-dev
+
+suitesparse-dev:
+    debian,ubuntu: libsuitesparse-dev
+

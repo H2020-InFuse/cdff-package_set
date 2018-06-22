@@ -1,0 +1,13 @@
+<package>
+  <description brief="ceres-solver"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <depend package="eigen3" />
+  <depend package="google-glog-dev" />
+  <depend package="atlas-base-dev" />
+  <depend package="suitesparse-dev" />
+  <tags>stable</tags>
+</package>
+
