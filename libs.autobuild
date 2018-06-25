@@ -99,7 +99,7 @@ end
 cmake_package "infuse/envire_asn1"
 cmake_package "infuse/ASN_Viz"
 
-def python_package(name, relative_setup_location: "", &configure)
+def configurable_python_package(name, relative_setup_location: "", &configure)
     package_common(:import, name) do |pkg|
         pkg.depends_on "python3"
         pkg.post_install do
@@ -116,7 +116,7 @@ def python_package(name, relative_setup_location: "", &configure)
     end
 end
 
-python_package "cdff/CDFF_dev" do |pkg|
+configurable_python_package "cdff/CDFF_dev" do |pkg|
 #    Autoproj.message("pkg: #{pkg}")
 #TODO: why can pkg be nil?
     unless pkg.nil? ||
