@@ -20,7 +20,6 @@ if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') || (Autoproj.
      Autoproj.add_osdeps_overrides 'opencv', :package => 'cdff/external/opencv', :force => true
      Autoproj.add_osdeps_overrides 'slam/pcl', :package => 'cdff/external/pcl', :force => true   
 end
-Autobuild::Package['cdff/CDFF'].depends_on "cdff/external/ceres-solver"
 
 Autobuild::Package['types/base'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
 Autobuild::Package['types/base'].depends_on "tools/asn1scc"
