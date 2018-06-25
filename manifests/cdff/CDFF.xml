@@ -13,7 +13,7 @@
   <depend package="vtk" />
   <depend package="slam/pcl" />
   <depend package="curl" />
-  <depend package="ceres-solver" />
+  <depend package="cdff/external/ceres-solver" />
   <tags>stable</tags>
 </package>
 
