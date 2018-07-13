@@ -11,13 +11,14 @@ imports:
   - github: ESROCOS/package_set-core
 
 overrides:
-- types/base_support:
-  github: H2020-InFuse/types-base_support
-  branch: types-base_support_old
+    - types/base:
+      github: H2020-InFuse/types-base
+      branch: types-base-old
 
-- types/sensor_samples_support:
-  github: H2020-InFuse/types-sensor_samples_support
-  branch: types-sensor_samples_support_old
+    - types/base_support:
+      github: H2020-InFuse/types-base_support
+      branch: types-base_support_old
+
 
 # source definitions
 version_control:
@@ -76,12 +77,11 @@ version_control:
         - [$AUTOPROJ_SOURCE_DIR/pcl_pkgconfig.patch, 1]
 
     - types/sensor_samples:
-      github: ESROCOS/types-sensor_samples
-      branch: master
+      github: H2020-InFuse/types-sensor_samples
 
     - types/sensor_samples_support:
-      github: ESROCOS/types-sensor_samples_support
-      branch: master
+      github: H2020-InFuse/types-sensor_samples_support
+      branch: types-sensor_samples_support_old
 
     - cdff/external/ceres-solver:
       github: ceres-solver/ceres-solver
