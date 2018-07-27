@@ -96,6 +96,7 @@ cmake_package "cdff/external/ceres-solver" do |pkg|
     pkg.define 'BUILD_EXAMPLES', 'OFF'
 end
 
+cmake_package "infuse/asn1_types"
 cmake_package "infuse/envire_asn1"
 cmake_package "infuse/ASN_Viz"
 

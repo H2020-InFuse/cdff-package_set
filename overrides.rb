@@ -29,8 +29,7 @@ Autobuild::Package['types/base_support'].define "ASN1_COMPILER", "#{ENV['AUTOPRO
 Autobuild::Package['types/sensor_samples_support'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
 # NOTE: workaround for missing dependency
 Autobuild::Package['types/sensor_samples_support'].depends_on "types/sensor_samples"
-#Autobuild::Package['infuse/ASN_Viz'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
-
 Autobuild::Package['infuse/ASN_Viz'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
-Autobuild::Package['infuse/envire_asn1'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
 
+Autobuild::Package['infuse/asn1_types'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+Autobuild::Package['infuse/asn1_types'].depends_on "tools/asn1scc"
