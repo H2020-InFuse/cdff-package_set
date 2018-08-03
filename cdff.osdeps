@@ -135,3 +135,20 @@ atlas-base-dev:
 suitesparse-dev:
     debian,ubuntu: libsuitesparse-dev
 
+gdal:
+    debian: libgdal1-dev
+    ubuntu:
+     '12.04,14.04,14.10,15.04,15.10': libgdal1-dev
+     default: libgdal-dev
+    gentoo: sci-libs/gdal
+    fedora: gdal-devel
+    arch,manjarolinux: gdal
+    # opensuse: [libgdal-devel, gdal, libgdal1] # available in repository Application:/Geo
+    macos-port: gdal
+
+proj:
+    debian,ubuntu: libproj-dev
+    gentoo: sci-libs/proj
+    fedora: proj-devel
+    arch,manjarolinux: proj
+opensuse: [proj, libproj-devel]
