@@ -10,6 +10,8 @@ cmake_package "types/sensor_samples"
 cmake_package "types/sensor_samples_support"
 move_package "types/sensor_samples", "esrocos/types"
 move_package "types/sensor_samples_support", "esrocos/types"
+cmake_package "types/fused"
+move_package "types/fused", "esrocos/types"
 
 import_package "tools/asn1scc" do |pkg|
    pkg.depends_on "mono"

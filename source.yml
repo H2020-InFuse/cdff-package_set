@@ -22,6 +22,10 @@ overrides:
 
 # source definitions
 version_control:
+
+    - types/fused:
+      github: H2020-InFuse/types-fused
+
     - cdff/CDFF:
       spaceapp: InFuse/CDFF
       patches: 
