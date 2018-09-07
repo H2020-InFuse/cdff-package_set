@@ -21,16 +21,19 @@ if (Autoproj.user_config('CDFF_EXTERNAL_SOURCE_INSTALL') == 'all') || (Autoproj.
      Autoproj.add_osdeps_overrides 'slam/pcl', :package => 'cdff/external/pcl', :force => true   
 end
 
-Autobuild::Package['types/base'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+asn_compiler = "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+
+Autobuild::Package['types/base'].define "ASN1_COMPILER", asn_compiler
 Autobuild::Package['types/base'].depends_on "tools/asn1scc"
-Autobuild::Package['types/sensor_samples'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+Autobuild::Package['types/sensor_samples'].define "ASN1_COMPILER", asn_compiler
 Autobuild::Package['types/sensor_samples'].depends_on "tools/asn1scc"
-Autobuild::Package['types/base_support'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
-Autobuild::Package['types/sensor_samples_support'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
-Autobuild::Package['types/fused'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+Autobuild::Package['types/base_support'].define "ASN1_COMPILER", asn_compiler
+Autobuild::Package['types/sensor_samples_support'].define "ASN1_COMPILER", asn_compiler
+Autobuild::Package['types/fused'].define "ASN1_COMPILER", asn_compiler
+
 # NOTE: workaround for missing dependency
 Autobuild::Package['types/sensor_samples_support'].depends_on "types/sensor_samples"
-Autobuild::Package['infuse/ASN_Viz'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+Autobuild::Package['infuse/ASN_Viz'].define "ASN1_COMPILER", asn_compiler
 
-Autobuild::Package['infuse/asn1_types'].define "ASN1_COMPILER", "#{ENV['AUTOPROJ_CURRENT_ROOT']}/tools/asn1scc/asn1.exe"
+Autobuild::Package['infuse/asn1_types'].define "ASN1_COMPILER", asn_compiler
 Autobuild::Package['infuse/asn1_types'].depends_on "tools/asn1scc"
