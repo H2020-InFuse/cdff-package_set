@@ -93,3 +93,6 @@ version_control:
 
     - infuse/.*:
       github: H2020-InFuse/infuse-$PACKAGE_BASENAME
+
+    - tools/msgpack-c:
+      github: msgpack/msgpack-c.git
