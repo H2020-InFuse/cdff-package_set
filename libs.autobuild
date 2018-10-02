@@ -13,6 +13,8 @@ move_package "types/sensor_samples_support", "esrocos/types"
 cmake_package "types/fused"
 move_package "types/fused", "esrocos/types"
 
+cmake_package "tools/msgpack-c"
+
 import_package "tools/asn1scc" do |pkg|
    pkg.depends_on "mono"
    pkg.depends_on "mono-numerics"
