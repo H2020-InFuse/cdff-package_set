@@ -134,10 +134,14 @@ configurable_python_package "cdff/CDFF_dev" do |pkg|
     end
 end
 
-
-
-
-
+import_package "infuse/edreswrapper" do |pkg|
+    pkg.post_install do
+        pkg.message "installing edreswrapper"
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./include/edres-wrapper ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/include', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./lib/* ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/lib', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  EDRESWRAPPERConfig.cmake ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/share/cmake', :working_directory => pkg.srcdir)
+    end
+end
 
 
 

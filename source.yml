@@ -96,3 +96,8 @@ version_control:
 
     - tools/msgpack-c:
       github: msgpack/msgpack-c.git
+
+    - infuse/edreswrapper:
+      type: archive
+      url: http://web.magellium.fr/~H2020INFUSE/edreswrapper-sdk-1.0.0.tar.gz
+
