@@ -134,6 +134,9 @@ configurable_python_package "cdff/CDFF_dev" do |pkg|
     end
 end
 
+cmake_package "tools/pocolog2msgpack"
+configurable_python_package "tools/pocolog2msgpack"
+
 import_package "infuse/edreswrapper" do |pkg|
     pkg.post_install do
         pkg.message "installing edreswrapper"
