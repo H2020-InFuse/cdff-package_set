@@ -101,3 +101,6 @@ version_control:
       type: archive
       url: http://web.magellium.fr/~H2020INFUSE/edreswrapper-sdk-1.0.0.tar.gz
 
+    - tools/pocolog2msgpack:
+      github: rock-core/tools-pocolog2msgpack
+
