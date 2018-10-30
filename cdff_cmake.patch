@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index b1ed8ec..1f8f36a 100644
+index fed9188..59024a5 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -84,7 +84,7 @@ endif()
+@@ -85,7 +85,7 @@ endif()
  if(USE_BUNDLED_DEPENDENCIES)
  
    set(CMAKE_MODULE_PATH
@@ -11,16 +11,16 @@ index b1ed8ec..1f8f36a 100644
  
  else()
  
-@@ -143,7 +143,7 @@ endmacro()
+@@ -144,7 +144,7 @@ endmacro()
  # CMake will look for the headers and the requested compiled libraries, as well
  # as the compiled libraries they depend on.
  
--find_package(Boost 1.66.0 REQUIRED COMPONENTS system)
-+find_package(Boost REQUIRED COMPONENTS system)
+-find_package(Boost 1.66.0 REQUIRED COMPONENTS serialization timer)
++find_package(Boost REQUIRED COMPONENTS system serialization timer)
  
  if(Boost_FOUND)
  
-@@ -224,6 +224,7 @@ endif()
+@@ -225,6 +225,7 @@ endif()
  # TODO: remove, use imported target Eigen3::Eigen instead
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include/eigen3"
@@ -28,7 +28,7 @@ index b1ed8ec..1f8f36a 100644
  )
  
  ## Look for Ceres --------------------------------------------------------------
-@@ -280,19 +281,20 @@ endif()
+@@ -281,19 +282,20 @@ endif()
  
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include"
@@ -52,7 +52,7 @@ index b1ed8ec..1f8f36a 100644
  find_package_mode(OpenCV)
  
  include_directories(
-@@ -309,6 +311,7 @@ include_directories(
+@@ -329,6 +331,7 @@ endif()
  
  link_directories(
    "${_DEPENDENCIES_PREFIX}/lib"
