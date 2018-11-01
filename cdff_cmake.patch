@@ -15,8 +15,8 @@ index fed9188..59024a5 100644
  # CMake will look for the headers and the requested compiled libraries, as well
  # as the compiled libraries they depend on.
  
--find_package(Boost 1.66.0 REQUIRED COMPONENTS serialization timer)
-+find_package(Boost REQUIRED COMPONENTS system serialization timer)
+-find_package(Boost 1.66.0 REQUIRED)
++find_package(Boost REQUIRED)
  
  if(Boost_FOUND)
  
