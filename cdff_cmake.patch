@@ -1,5 +1,5 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index fed9188..59024a5 100644
+index db9b1ea..810e4fe 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -85,7 +85,7 @@ endif()
@@ -20,7 +20,7 @@ index fed9188..59024a5 100644
  
  if(Boost_FOUND)
  
-@@ -225,6 +225,7 @@ endif()
+@@ -222,6 +222,7 @@ endif()
  # TODO: remove, use imported target Eigen3::Eigen instead
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include/eigen3"
@@ -28,7 +28,7 @@ index fed9188..59024a5 100644
  )
  
  ## Look for Ceres --------------------------------------------------------------
-@@ -281,19 +282,20 @@ endif()
+@@ -278,16 +279,17 @@ endif()
  
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include"
@@ -46,17 +46,18 @@ index fed9188..59024a5 100644
 -find_package(PCL 1.8.1 REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
 +find_package(PCL REQUIRED NAMES PCL PCL-1.8 CONFIGS PCLConfig.cmake)
  find_package_mode(PCL)
+ add_definitions(${PCL_DEFINITIONS})
+ include_directories(SYSTEM ${PCL_INCLUDE_DIRS})
+@@ -298,9 +300,11 @@ message(STATUS "Found PCL headers, and the headers of its dependencies, in: ${PC
+ message(STATUS "Found PCL libraries in: ${PCL_LIBRARY_DIRS}")
+ message(STATUS "All requested PCL libraries, and their dependencies: ${PCL_LIBRARIES}")
  
 -find_package(OpenCV 3.4.0 REQUIRED)
 +find_package(OpenCV REQUIRED)
  find_package_mode(OpenCV)
  
- include_directories(
-@@ -329,6 +331,7 @@ endif()
++link_directories("/usr/lib")
++
+ ## Look for Edres-Wrapper (optional dependency) --------------------------------
  
- link_directories(
-   "${_DEPENDENCIES_PREFIX}/lib"
-+  "/usr/lib"
- )
- 
- ## CDFF ------------------------------------------------------------------------
+ find_package(Edres-Wrapper QUIET)
