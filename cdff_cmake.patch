@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index db9b1ea..810e4fe 100644
+index 307f096..b0f4efa 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -85,7 +85,7 @@ endif()
+@@ -90,7 +90,7 @@ endif()
  if(USE_BUNDLED_DEPENDENCIES)
  
    set(CMAKE_MODULE_PATH
@@ -11,7 +11,7 @@ index db9b1ea..810e4fe 100644
  
  else()
  
-@@ -144,7 +144,7 @@ endmacro()
+@@ -149,7 +149,7 @@ endmacro()
  # CMake will look for the headers and the requested compiled libraries, as well
  # as the compiled libraries they depend on.
  
@@ -20,7 +20,16 @@ index db9b1ea..810e4fe 100644
  
  if(Boost_FOUND)
  
-@@ -222,6 +222,7 @@ endif()
+@@ -205,7 +205,7 @@ endif()
+ 
+ # TODO: doc
+ 
+-find_package(Eigen3 3.3.4 REQUIRED)
++find_package(Eigen3 REQUIRED)
+ 
+ if(Eigen3_FOUND)
+ 
+@@ -227,13 +227,14 @@ endif()
  # TODO: remove, use imported target Eigen3::Eigen instead
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include/eigen3"
@@ -28,14 +37,23 @@ index db9b1ea..810e4fe 100644
  )
  
  ## Look for Ceres --------------------------------------------------------------
-@@ -278,16 +279,17 @@ endif()
+ 
+ # TODO: doc
+ 
+-find_package(Ceres 1.14.0 REQUIRED COMPONENTS SparseLinearAlgebraLibrary)
++find_package(Ceres REQUIRED COMPONENTS SparseLinearAlgebraLibrary)
+ 
+ if(Ceres_FOUND)
+ 
+@@ -289,6 +290,7 @@ endif()
  
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include"
 +  "/usr/include"
  )
  
- ## Look for VTK, PCL, OpenCV ---------------------------------------------------
+ link_directories(
+@@ -299,10 +301,10 @@ link_directories(
  
  # TODO: rework this section
  
@@ -48,7 +66,7 @@ index db9b1ea..810e4fe 100644
  find_package_mode(PCL)
  add_definitions(${PCL_DEFINITIONS})
  include_directories(SYSTEM ${PCL_INCLUDE_DIRS})
-@@ -298,9 +300,11 @@ message(STATUS "Found PCL headers, and the headers of its dependencies, in: ${PC
+@@ -313,7 +315,7 @@ message(STATUS "Found PCL headers, and the headers of its dependencies, in: ${PC
  message(STATUS "Found PCL libraries in: ${PCL_LIBRARY_DIRS}")
  message(STATUS "All requested PCL libraries, and their dependencies: ${PCL_LIBRARIES}")
  
@@ -56,8 +74,4 @@ index db9b1ea..810e4fe 100644
 +find_package(OpenCV REQUIRED)
  find_package_mode(OpenCV)
  
-+link_directories("/usr/lib")
-+
  ## Look for Edres-Wrapper (optional dependency) --------------------------------
- 
- find_package(Edres-Wrapper QUIET)
