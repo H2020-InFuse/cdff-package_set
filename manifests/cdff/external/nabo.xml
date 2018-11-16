@@ -1,0 +1,9 @@
+<package>
+  <description brief="nabo"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <depend package="eigen" />
+  <tags>stable</tags>
+</package>

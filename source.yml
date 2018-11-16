@@ -28,8 +28,8 @@ version_control:
 
     - cdff/CDFF:
       spaceapp: InFuse/CDFF
-      patches: 
-        - [$AUTOPROJ_SOURCE_DIR/cdff_cmake.patch, 1]
+#      patches: 
+#        - [$AUTOPROJ_SOURCE_DIR/patches/cdff_cmake.patch, 1]
 
     - cdff/CDFF_dev:
       spaceapp: InFuse/CDFF_dev
@@ -78,7 +78,28 @@ version_control:
       github: PointCloudLibrary/pcl
       tag: pcl-1.8.1
       patches: 
-        - [$AUTOPROJ_SOURCE_DIR/pcl_pkgconfig.patch, 1]
+        - [$AUTOPROJ_SOURCE_DIR/patches/pcl_pkgconfig.patch, 1]
+
+    - cdff/external/nabo:
+      github: ethz-asl/libnabo.git
+      commit: 3b15ebca87bcb242cd3a919929cc301953552197
+      patches:
+        - [$AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418-no_python_bindings.patch, 1]
+
+    - cdff/external/pointmatcher:
+      github: ethz-asl/libpointmatcher
+      commit: 591241e360e5c7ce7b4b35b9e99f88b1db521e8b
+
+    - cdff/external/cloudcompare-core:
+      github: CloudCompare/CloudCompare
+      commit: e1b281c2b229f8aa7dd961853cf93e130e1cfa5c
+      #patches:
+      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch
+      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch
+      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch
+
+
+
 
     - types/sensor_samples:
       github: H2020-InFuse/types-sensor_samples
@@ -98,6 +119,10 @@ version_control:
       github: msgpack/msgpack-c.git
 
     - infuse/edreswrapper:
+      type: archive
+      url: http://web.magellium.fr/~H2020INFUSE/edreswrapper-sdk-1.0.0.tar.gz
+
+    - infuse/dlrtracker-core:
       type: archive
       url: http://web.magellium.fr/~H2020INFUSE/edreswrapper-sdk-1.0.0.tar.gz
 

@@ -1,0 +1,8 @@
+<package>
+  <description brief="cloudcompare"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <tags>stable</tags>
+</package>

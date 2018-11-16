@@ -1,0 +1,8 @@
+<package>
+  <description brief="pointmatcher"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cdff/external/nabo" />
+  <tags>stable</tags>
+</package>
