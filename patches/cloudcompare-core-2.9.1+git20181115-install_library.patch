@@ -1,7 +1,9 @@
---- CMakeLists.txt.rename_library	2018-11-15 23:20:33.151935679 +0000
-+++ CMakeLists.txt.install_library	2018-11-15 23:23:10.479932688 +0000
-@@ -74,7 +74,7 @@
- 			install_shared( cloudcompare-core ${dest} 1 )
+diff --git a/CC/CMakeLists.txt b/CC/CMakeLists.txt
+index d9aaa5b9..211e6d94 100644
+--- a/CC/CMakeLists.txt
++++ b/CC/CMakeLists.txt
+@@ -74,7 +74,7 @@ if ( COMPILE_CC_CORE_LIB_SHARED )
+ 			install_shared( cloudcompare_core ${dest} 1 )
  		endforeach()
  	else()
 -		install_shared( cloudcompare_core ${CMAKE_INSTALL_LIBDIR}/cloudcompare 0 ) #default destination: /usr/lib/cloudcompare

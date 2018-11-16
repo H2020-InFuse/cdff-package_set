@@ -84,7 +84,7 @@ version_control:
       github: ethz-asl/libnabo.git
       commit: 3b15ebca87bcb242cd3a919929cc301953552197
       patches:
-        - [$AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418-no_python_bindings.patch, 1]
+        - $AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418-no_python_bindings.patch
 
     - cdff/external/pointmatcher:
       github: ethz-asl/libpointmatcher
@@ -93,10 +93,10 @@ version_control:
     - cdff/external/cloudcompare-core:
       github: CloudCompare/CloudCompare
       commit: e1b281c2b229f8aa7dd961853cf93e130e1cfa5c
-      #patches:
-      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch
-      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch
-      #  - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch
+      patches:
+        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch
+        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch
+        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch
 
 
 
