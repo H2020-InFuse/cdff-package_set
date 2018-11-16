@@ -14,6 +14,7 @@
   <depend package="slam/pcl" />
   <depend package="curl" />
   <depend package="cdff/external/ceres-solver" />
+  <depend package="cdff/external/pointmatcher" />
   <tags>stable</tags>
 </package>
 

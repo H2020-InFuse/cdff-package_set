@@ -101,6 +101,50 @@ cmake_package "cdff/external/ceres-solver" do |pkg|
     pkg.define 'BUILD_EXAMPLES', 'OFF'
 end
 
+cmake_package "cdff/external/nabo" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'SHARED_LIBS', 'ON'
+    pkg.define 'USE_OPEN_MP', 'OFF'
+    pkg.define 'USE_OPEN_CL', 'OFF'
+end
+
+cmake_package "cdff/external/pointmatcher" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'SHARED_LIBS', 'ON'
+    pkg.define 'USE_OPEN_MP', 'OFF'
+    pkg.define 'USE_OPEN_CL', 'OFF'
+    pkg.define 'USE_SYSTEM_YAML_CPP', 'OFF'
+    pkg.define 'GENERATE_API_DOC', 'OFF'
+end
+
+def subfolder_package(parent_path, build_path ,type = :cmake_package)
+    if Gem::Version.new(Autobuild::VERSION) <= Gem::Version.new('1.7.2')
+        send(type,build_path) do |pkg|
+            pkg.srcdir = parent_path
+            pkg.post_import do
+                pkg.srcdir = build_path
+                Autoproj.manifest.load_package_manifest(pkg.name)
+            end
+            yield pkg if block_given?
+        end
+    else
+        send(type,build_path) do |pkg|
+            pkg.importdir = parent_path
+            yield pkg if block_given?
+        end
+    end
+end
+
+
+subfolder_package "cdff/external/cloudcompare-core", "cdff/external/cloudcompare-core/CC"  do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'COMPILE_CC_CORE_LIB_SHARED', 'ON'
+    pkg.define 'COMPILE_CC_CORE_LIB_WITH_QT', 'OFF'
+    pkg.define 'COMPILE_CC_CORE_LIB_WITH_CGAL', 'OFF'
+    pkg.define 'COMPILE_CC_CORE_LIB_WITH_TBB', 'OFF'
+    pkg.define 'OPTION_BUILD_CCVIEWER', 'OFF'
+end
+
 cmake_package "infuse/asn1_types"
 cmake_package "infuse/envire_asn1"
 cmake_package "infuse/ASN_Viz"
@@ -144,5 +188,13 @@ import_package "infuse/edreswrapper" do |pkg|
     end
 end
 
+import_package "infuse/dlrtracker-core" do |pkg|
+    pkg.post_install do
+        pkg.message "dlrtracker-core"
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./include/edres-wrapper ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/include', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./lib/* ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/lib', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  Edres-WrapperConfig.cmake ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/share/cmake', :working_directory => pkg.srcdir)
+    end
+end
 
 
