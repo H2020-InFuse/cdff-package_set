@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 442328e..c30586b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -168,10 +168,6 @@ endif (DOXYGEN_FOUND)
+ 
+ enable_testing()
+ 
+-add_subdirectory(examples)
+-add_subdirectory(tests)
+-add_subdirectory(python)
+-
+ # Install catkin package.xml
+ install(FILES package.xml DESTINATION share/libnabo)
+ 

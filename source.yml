@@ -84,8 +84,8 @@ version_control:
       github: ethz-asl/libnabo.git
       commit: 3b15ebca87bcb242cd3a919929cc301953552197
       patches:
-        - $AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418-no_python_bindings.patch
-
+        - [$AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418.patch,1]
+      
     - cdff/external/pointmatcher:
       github: ethz-asl/libpointmatcher
       commit: 591241e360e5c7ce7b4b35b9e99f88b1db521e8b
@@ -97,9 +97,6 @@ version_control:
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch,1]
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch,1]
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch,1]
-
-
-
 
     - types/sensor_samples:
       github: H2020-InFuse/types-sensor_samples
