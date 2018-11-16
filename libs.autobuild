@@ -191,9 +191,11 @@ end
 import_package "infuse/dlrtracker-core" do |pkg|
     pkg.post_install do
         pkg.message "dlrtracker-core"
-        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./include/edres-wrapper ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/include', :working_directory => pkg.srcdir)
-        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./lib/* ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/lib', :working_directory => pkg.srcdir)
-        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  Edres-WrapperConfig.cmake ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/share/cmake', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./include/DLRtracker_core ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/include', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  DLRtracker_coreConfig.cmake ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/share/cmake', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'ln -s lib/libDLRtracker_core.so.1.0.0 lib/libDLRtracker_core.so.1', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'ln -s lib/libDLRtracker_core.so.1 lib/libDLRtracker_core.so', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./lib/* ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/lib/DLRtracker_core', :working_directory => pkg.srcdir)        
     end
 end
 
