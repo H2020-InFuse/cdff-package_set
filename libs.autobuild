@@ -136,7 +136,7 @@ def subfolder_package(parent_path, build_path ,type = :cmake_package)
 end
 
 
-subfolder_package "cdff/external/cloudcompare-core", "cdff/external/cloudcompare-core/CC"  do |pkg|
+subfolder_package "cdff/external/cloudcompare-core", "cdff/external/cloudcompare-core/CC" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE', 'Release'
     pkg.define 'COMPILE_CC_CORE_LIB_SHARED', 'ON'
     pkg.define 'COMPILE_CC_CORE_LIB_WITH_QT', 'OFF'

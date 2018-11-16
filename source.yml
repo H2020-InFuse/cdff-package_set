@@ -90,13 +90,13 @@ version_control:
       github: ethz-asl/libpointmatcher
       commit: 591241e360e5c7ce7b4b35b9e99f88b1db521e8b
 
-    - cdff/external/cloudcompare-core:
+    - cdff/external/cloudcompare-core/CC:
       github: CloudCompare/CloudCompare
       commit: e1b281c2b229f8aa7dd961853cf93e130e1cfa5c
       patches:
-        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch
-        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch
-        - $AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch
+        - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch,1]
+        - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch,1]
+        - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch,1]
 
 
 
