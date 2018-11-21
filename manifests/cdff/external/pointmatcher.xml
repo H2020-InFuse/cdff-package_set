@@ -3,6 +3,7 @@
   <author></author>
   <license>Copyright</license>
   <url></url>
+  <depend package="boost" />
   <depend package="cdff/external/nabo" />
   <tags>stable</tags>
 </package>
