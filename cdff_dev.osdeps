@@ -30,3 +30,4 @@ numpy: pip
 msgpack-python: pip
 pydot: pip
 pandas: pip
+memory_profiler: pip
