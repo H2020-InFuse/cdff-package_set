@@ -16,6 +16,7 @@
   <depend package="cdff/external/ceres-solver" />
   <depend package="cdff/external/pointmatcher" />
   <depend package="cdff/external/cloudcompare-core/CC" />
+  <depend package="infuse/edreswrapper" />
   <tags>stable</tags>
 </package>
 
