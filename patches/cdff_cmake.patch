@@ -1,8 +1,8 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index ff53c57..b0d2e82 100644
+index 99575f2..f84ec1e 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -90,7 +90,7 @@ endif()
+@@ -93,7 +93,7 @@ endif()
  if(USE_BUNDLED_DEPENDENCIES)
  
    set(CMAKE_MODULE_PATH
@@ -11,7 +11,7 @@ index ff53c57..b0d2e82 100644
  
  else()
  
-@@ -149,7 +149,7 @@ endmacro()
+@@ -152,7 +152,7 @@ endmacro()
  # CMake will look for the headers and the requested compiled libraries, as well
  # as the compiled libraries they depend on.
  
@@ -20,7 +20,7 @@ index ff53c57..b0d2e82 100644
  
  if(Boost_FOUND)
  
-@@ -205,7 +205,7 @@ endif()
+@@ -208,7 +208,7 @@ endif()
  
  # TODO: doc
  
@@ -29,7 +29,7 @@ index ff53c57..b0d2e82 100644
  
  if(Eigen3_FOUND)
  
-@@ -227,13 +227,14 @@ endif()
+@@ -230,13 +230,14 @@ endif()
  # TODO: remove, use imported target Eigen3::Eigen instead
  include_directories(
    SYSTEM "${_DEPENDENCIES_PREFIX}/include/eigen3"
@@ -45,7 +45,7 @@ index ff53c57..b0d2e82 100644
  
  if(Ceres_FOUND)
  
-@@ -299,10 +300,10 @@ link_directories(
+@@ -306,10 +307,10 @@ link_directories(
  
  # TODO: rework this section
  
@@ -58,7 +58,7 @@ index ff53c57..b0d2e82 100644
  find_package_mode(PCL)
  add_definitions(${PCL_DEFINITIONS})
  include_directories(SYSTEM ${PCL_INCLUDE_DIRS})
-@@ -313,7 +314,7 @@ message(STATUS "Found PCL headers, and the headers of its dependencies, in: ${PC
+@@ -320,7 +321,7 @@ message(STATUS "Found PCL headers, and the headers of its dependencies, in: ${PC
  message(STATUS "Found PCL libraries in: ${PCL_LIBRARY_DIRS}")
  message(STATUS "All requested PCL libraries, and their dependencies: ${PCL_LIBRARIES}")
  
