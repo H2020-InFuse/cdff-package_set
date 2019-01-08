@@ -1,0 +1,12 @@
+<package>
+  <description brief="pangolin"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <depend package="opencv" />
+  <tags>stable</tags>
+</package>
+
+
+

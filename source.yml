@@ -97,6 +97,10 @@ version_control:
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-rename_library.patch,1]
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_library.patch,1]
         - [$AUTOPROJ_SOURCE_DIR/patches/cloudcompare-core-2.9.1+git20181115-install_headers.patch,1]
+    
+    - cdff/external/pangolin:
+      github: strasdat/Pangolin
+      commit: 66df6eab2b456592884a53e7fc2805e8c2491fea
 
     - types/sensor_samples:
       github: H2020-InFuse/types-sensor_samples

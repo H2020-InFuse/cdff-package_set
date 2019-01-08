@@ -117,6 +117,10 @@ cmake_package "cdff/external/pointmatcher" do |pkg|
     pkg.define 'GENERATE_API_DOC', 'OFF'
 end
 
+cmake_package "cdff/external/pangolin" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+end
+
 def subfolder_package(parent_path, build_path ,type = :cmake_package)
     if Gem::Version.new(Autobuild::VERSION) <= Gem::Version.new('1.7.2')
         send(type,build_path) do |pkg|
