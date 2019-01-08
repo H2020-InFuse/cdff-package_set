@@ -6,6 +6,7 @@
   <depend package="cmake" />
   <depend package="flann" />
   <depend package="eigen3" />
+  <depend package="cdff/external/opencv_contrib" />
   <tags>stable</tags>
 </package>
 

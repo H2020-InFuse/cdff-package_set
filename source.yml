@@ -46,6 +46,10 @@ version_control:
       github: opencv/opencv
       tag: 3.4.0
       
+    - cdff/external/opencv_contrib:
+      github: opencv/opencv_contrib
+      tag: 3.4.0
+
     - cdff/external/eigen:
       github: eigenteam/eigen-git-mirror
       tag: 3.3.4 

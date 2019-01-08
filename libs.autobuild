@@ -43,6 +43,8 @@ import_package "cdff/external/boost" do |pkg|
     end
 end
 
+
+import_package "cdff/external/opencv_contrib"
 cmake_package "cdff/external/opencv" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE','RELEASE'
     pkg.define 'WITH_FFMPEG','OFF'
@@ -53,6 +55,9 @@ cmake_package "cdff/external/opencv" do |pkg|
     pkg.define 'ENABLE_FAST_MATH','ON'
     pkg.define 'WITH_IPP','OFF'
     pkg.define 'WITH_VTK','OFF'
+    pkg.define 'OPENCV_EXTRA_MODULES_PATH', ENV['AUTOPROJ_CURRENT_ROOT']+"/cdff/external/opencv_contrib/modules"
+    pkg.define 'BUILD_LIST', 'calib3d,core,dnn,features2d,flann,highgui,imgcodecs,imgproc,ml,objdetect,photo,python2,python3,python_bindings_generator,shape,stitching,superres,ts,video,videoio,videostab,viz,rgbd,ximgproc'
+    pkg.define 'CPU_BASELINE', 'SSE3 -D CPU_DISPATCH=SSE4_1,SSE4_2'
 end
 
 cmake_package "cdff/external/cmake"
