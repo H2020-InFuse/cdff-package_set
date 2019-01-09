@@ -5,6 +5,7 @@
   <url></url>
   <depend package="cmake" />
   <depend package="opencv" />
+  <depend package="glew" />
   <tags>stable</tags>
 </package>
 

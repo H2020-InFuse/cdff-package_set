@@ -152,3 +152,6 @@ proj:
     fedora: proj-devel
     arch,manjarolinux: proj
 opensuse: [proj, libproj-devel]
+
+glew:
+    debian,ubuntu: libglew-dev
