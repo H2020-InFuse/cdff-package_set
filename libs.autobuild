@@ -126,6 +126,63 @@ cmake_package "cdff/external/pangolin" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE', 'Release'
 end
 
+cmake_package "cdff/external/visp" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'USE_CPP11', 'ON'
+	pkg.define 'BUILD_DEMOS', 'OFF'
+	pkg.define 'BUILD_TESTS', 'OFF'
+    pkg.define 'BUILD_TUTORIALS', 'OFF'
+    pkg.define 'BUILD_EXAMPLES', 'OFF'
+    pkg.define 'USE_YARP', 'OFF'
+    pkg.define 'USE_REALSENSE2', 'ON'
+    pkg.define 'USE_PCL', 'ON'
+    pkg.define 'BUILD_MODULE_visp_ar', 'ON'
+    pkg.define 'BUILD_MODULE_visp_blob', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_core', 'ON'
+    pkg.define 'BUILD_MODULE_visp_detection', 'ON'
+    pkg.define 'BUILD_MODULE_visp_gui', 'ON'
+    pkg.define 'BUILD_MODULE_visp_imgproc', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_io', 'ON'
+    pkg.define 'BUILD_MODULE_visp_klt', 'ON'
+    pkg.define 'BUILD_MODULE_visp_mbt', 'ON'
+    pkg.define 'BUILD_MODULE_visp_me', 'ON'
+    pkg.define 'BUILD_MODULE_visp_robot', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_sensor', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_tt', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_tt_mi', 'OFF'
+    pkg.define 'BUILD_MODULE_visp_vision', 'ON'
+    pkg.define 'BUILD_MODULE_visp_visual_features', 'ON'
+    pkg.define 'BUILD_MODULE_visp_vs', 'OFF'
+end
+
+import_package "cdff/external/coin3d" do |pkg|
+    pkg.post_install do
+        pkg.progress_start "configuring %s" do
+            Autobuild::Subprocess.run(pkg, 'build', './configure', "--prefix=#{ENV['AUTOPROJ_CURRENT_ROOT']}", :working_directory => pkg.srcdir)
+        end
+        pkg.progress_start "building %s" do
+            Autobuild::Subprocess.run(pkg, 'build', Autobuild.tool(:make), "-j", :working_directory => pkg.srcdir)
+        end
+        pkg.progress_start "installing %s" do
+            #Autobuild::Subprocess.run(pkg, 'build', Autobuild.tool(:make), "install", :working_directory => pkg.srcdir)
+        end
+        
+    end
+end
+
+
+cmake_package "cdff/external/realsense2" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'BUILD_EXAMPLES', 'FALSE'
+end
+cmake_package "cdff/external/ogre" do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'OGRE_BUILD_SAMPLES', 'ON'
+    pkg.define 'OGRE_BUILD_TESTS', 'OFF'
+end
+
+
+
 def subfolder_package(parent_path, build_path ,type = :cmake_package)
     if Gem::Version.new(Autobuild::VERSION) <= Gem::Version.new('1.7.2')
         send(type,build_path) do |pkg|

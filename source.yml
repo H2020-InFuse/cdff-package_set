@@ -134,3 +134,20 @@ version_control:
     - tools/pocolog2msgpack:
       github: rock-core/tools-pocolog2msgpack
 
+    - cdff/external/ogre:
+      github: OGRECave/ogre
+      tag: v1.9.1
+      #url: https://github.com/OGRECave/ogre/archive/v1.9.1.tar.gz
+
+    - cdff/external/visp:
+      github: lagadic/visp
+      tag: "3.1.0"
+
+    - cdff/external/coin3d:
+      type: archive
+      url: https://bitbucket.org/Coin3D/coin/get/default.tar.gz
+
+    - cdff/external/realsense2:
+      github: IntelRealSense/librealsense
+      tag: "v2.8.0"
+

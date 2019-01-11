@@ -17,6 +17,7 @@
   <depend package="cdff/external/pointmatcher" />
   <depend package="cdff/external/cloudcompare-core/CC" />
   <depend package="cdff/external/pangolin" />
+  <depend package="cdff/external/visp" />
   <depend package="infuse/edreswrapper" />
   <tags>stable</tags>
 </package>

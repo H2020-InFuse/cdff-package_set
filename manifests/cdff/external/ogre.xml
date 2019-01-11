@@ -1,0 +1,9 @@
+<package>
+  <description brief="ogre"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <!-- <depend package="libcppunit" /> -->
+  <depend package="libxaw7" />
+  <tags>stable</tags>
+</package>

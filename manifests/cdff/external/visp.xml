@@ -1,0 +1,10 @@
+<package>
+  <description brief="visp"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cdff/external/coin3d" />
+  <depend package="cdff/external/realsense2" />
+  <depend package="cdff/external/ogre" />
+  <tags>stable</tags>
+</package>

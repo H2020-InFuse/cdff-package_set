@@ -23,6 +23,12 @@ python3-pyqt4:
     opensuse:
         - python3-qt4
 
+#libcppunit:
+#    ubuntu: libcppunit-dev
+
+libxaw7:
+    ubuntu: libxaw7-dev
+
 pyyaml: pip
 jinja2: pip
 cython: pip
@@ -31,3 +37,4 @@ msgpack-python: pip
 pydot: pip
 pandas: pip
 memory_profiler: pip
+
