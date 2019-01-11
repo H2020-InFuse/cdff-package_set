@@ -18,7 +18,10 @@
   <depend package="cdff/external/cloudcompare-core/CC" />
   <depend package="cdff/external/pangolin" />
   <depend package="cdff/external/visp" />
+  <!--
+  Edres is currently not publicly available.
   <depend package="infuse/edreswrapper" />
+  -->
   <tags>stable</tags>
 </package>
 
