@@ -151,3 +151,27 @@ version_control:
       github: IntelRealSense/librealsense
       tag: "v2.8.0"
 
+    - cdff/external/dem_building:
+      github: QuentinLab/DEMBuilding.git
+      tag: InFuse
+
+    - cdff/external/gtsam:
+      type: git
+      url: https://bitbucket.org/gtborg/gtsam.git
+      commit: c21186c6212798e665da6b5015296713ddfe8c1d
+
+    - cdff/external/pom_base:
+      github: QuentinLab/POM-base
+      tag: InFuse
+    
+    - cdff/external/pom_crisp:
+      github: QuentinLab/POM-CRISP
+      tag: InFuse
+
+    - cdff/external/pom_tokamak:
+      github: QuentinLab/POM-Tokamak
+      tag: InFuse
+
+    - cdff/external/gdalwrap:
+      github: pierriko/gdalwrap
+      

@@ -1,0 +1,9 @@
+<package>
+  <description brief="cloudcompare"/>
+  <author></author>
+  <license>Copyright</license>
+  <url></url>
+  <depend package="cmake" />
+  <depend package="cdff/external/gdalwrap" />
+  <tags>stable</tags>
+</package>

@@ -181,6 +181,33 @@ cmake_package "cdff/external/ogre" do |pkg|
     pkg.define 'OGRE_BUILD_TESTS', 'OFF'
 end
 
+cmake_package 'cdff/external/dem_building' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+end
+
+cmake_package 'cdff/external/gtsam' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+end
+
+cmake_package 'cdff/external/pom_base' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+end
+
+cmake_package 'cdff/external/pom_crisp' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'WITH_ASN1', 'False'
+end
+
+cmake_package 'cdff/external/pom_tokamak' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'WITH_ASN1', 'False'
+end
+
+cmake_package 'cdff/external/gdalwrap' do |pkg|
+    pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+end
+
+
 
 
 def subfolder_package(parent_path, build_path ,type = :cmake_package)
@@ -264,5 +291,6 @@ import_package "infuse/dlrtracker-core" do |pkg|
         Autobuild::Subprocess.run(pkg, 'build', 'cp -rp  ./lib/* ' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install/lib/DLRtracker_core', :working_directory => pkg.srcdir)        
     end
 end
+
 
 
