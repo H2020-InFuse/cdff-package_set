@@ -27,12 +27,12 @@ version_control:
       github: H2020-InFuse/types-fused
 
     - cdff/CDFF:
-      spaceapp: InFuse/CDFF
+      github: H2020-InFuse/CDFF
 #      patches: 
 #        - [$AUTOPROJ_SOURCE_DIR/patches/cdff_cmake.patch, 1]
 
     - cdff/CDFF_dev:
-      spaceapp: InFuse/CDFF_dev
+      github: H2020-InFuse/cdff_dev
 
     - tools/asn1scc:
       type: archive
