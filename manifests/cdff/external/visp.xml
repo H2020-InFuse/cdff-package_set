@@ -6,6 +6,7 @@
   <depend package="cdff/external/coin3d" />
   <depend package="cdff/external/realsense2" />
   <depend package="cdff/external/ogre" />
+  <depend package="opencv" />
   <depend package="slam/pcl" />
   <tags>stable</tags>
 </package>
