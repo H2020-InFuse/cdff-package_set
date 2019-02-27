@@ -37,3 +37,5 @@ Autobuild::Package['infuse/ASN_Viz'].define "ASN1_COMPILER", asn_compiler
 
 Autobuild::Package['infuse/asn1_types'].define "ASN1_COMPILER", asn_compiler
 Autobuild::Package['infuse/asn1_types'].depends_on "tools/asn1scc"
+
+Autobuild::Package['base/types'].define "BINDINGS_RUBY", "OFF"
