@@ -5,5 +5,6 @@
   <url></url>
   <!-- <depend package="libcppunit" /> -->
   <depend package="libxaw7" />
+  <depend package="libxrandr" />
   <tags>stable</tags>
 </package>

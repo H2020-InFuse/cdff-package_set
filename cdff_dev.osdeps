@@ -29,6 +29,9 @@ python3-pyqt4:
 libxaw7:
     ubuntu: libxaw7-dev
 
+libxrandr:
+    ubuntu: libxrandr-dev
+
 pyyaml: pip
 jinja2: pip
 cython: pip
