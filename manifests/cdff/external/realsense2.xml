@@ -3,5 +3,6 @@
   <author></author>
   <license>Copyright</license>
   <url></url>
+  <depend package="libusb" />
   <tags>stable</tags>
 </package>

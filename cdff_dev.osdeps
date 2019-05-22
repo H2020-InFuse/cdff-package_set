@@ -32,6 +32,12 @@ libxaw7:
 libxrandr:
     ubuntu: libxrandr-dev
 
+xorg:
+    debian,ubuntu: xorg-dev
+
+libusb:
+    ubuntu: libusb-1.0-0-dev
+
 pyyaml: pip
 jinja2: pip
 cython: pip
