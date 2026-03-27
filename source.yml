@@ -36,7 +36,7 @@ version_control:
 
     - tools/asn1scc:
       type: archive
-      url: https://github.com/ttsiodras/asn1scc/releases/download/3.3.22/asn1scc-bin-3.3.22.tar.bz2
+      url: https://github.com/esa/asn1scc/releases/download/3.3.22/asn1scc-bin-3.3.22.tar.bz2
 
     - cdff/external/cmake:
       type: archive
@@ -56,7 +56,7 @@ version_control:
       
     - cdff/external/boost:
       type: archive
-      url: https://dl.bintray.com/boostorg/release/1.66.0/source/boost_1_66_0.tar.gz
+      url: https://archives.boost.io/release/1.66.0/source/boost_1_66_0.tar.gz
       
     - cdff/external/flann:
       github: mariusmuja/flann
@@ -145,7 +145,7 @@ version_control:
 
     - cdff/external/coin3d:
       type: archive
-      url: https://bitbucket.org/Coin3D/coin/get/default.tar.gz
+      url: https://github.com/coin3d/coin/archive/refs/tags/Coin-3.1.0.tar.gz
 
     - cdff/external/realsense2:
       github: IntelRealSense/librealsense
