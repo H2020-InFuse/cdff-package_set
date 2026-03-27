@@ -47,3 +47,6 @@ pydot: pip
 pandas: pip
 memory_profiler: pip
 
+
+gfortran:
+    debian,ubuntu: gfortran
