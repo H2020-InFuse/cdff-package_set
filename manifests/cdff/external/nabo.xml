@@ -4,6 +4,6 @@
   <license>Copyright</license>
   <url></url>
   <depend package="cmake" />
-  <depend package="eigen" />
+  <depend package="eigen3" />
   <tags>stable</tags>
 </package>
