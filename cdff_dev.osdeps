@@ -18,10 +18,14 @@ python3-dev:
 
 python3-pyqt4:
     ubuntu:
-        - python3-pyqt4
-        - python3-pyqt4.qtopengl
+        '22.04': nonexistent
+        default: [python3-pyqt4, python3-pyqt4.qtopengl]
     opensuse:
         - python3-qt4
+
+python3-pyqt5:
+    debian,ubuntu: [python3-pyqt5, python3-pyqt5.qtopengl]
+    opensuse: python3-qt5
 
 #libcppunit:
 #    ubuntu: libcppunit-dev
