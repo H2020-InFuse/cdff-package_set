@@ -150,7 +150,7 @@ version_control:
 
     - cdff/external/realsense2:
       github: IntelRealSense/librealsense
-      tag: "v2.8.0"
+      tag: "v2.55.1"
 
     - cdff/external/dem_building:
       github: QuentinLab/DEMBuilding.git
