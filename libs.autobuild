@@ -34,7 +34,7 @@ import_package "cdff/external/boost" do |pkg|
         pkg.message "bootstrapping boost"
         Autobuild::Subprocess.run(pkg, 'build', './bootstrap.sh', :working_directory => pkg.srcdir)
         pkg.message "building boost, this may take a while"
-        Autobuild::Subprocess.run(pkg, 'build', './b2 install --prefix=' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install', :working_directory => pkg.srcdir)
+        Autobuild::Subprocess.run(pkg, 'build', './b2 install --prefix=' + ENV['AUTOPROJ_CURRENT_ROOT'] + '/install --without-python', :working_directory => pkg.srcdir)
         pkg.message "boost installed"
         pkg.message "updating FindBoost Module in #{pkg.prefix}/share/cmake-3.11.0-rc4/Modules"
         Autobuild::Subprocess.run(pkg, 'build', 'mkdir -p share/cmake-3.11.0-rc4/Modules', :working_directory => pkg.prefix)
