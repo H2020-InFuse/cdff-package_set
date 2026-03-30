@@ -1,0 +1,12 @@
+diff --git a/CC/src/BoundingBox.cpp b/CC/src/BoundingBox.cpp
+index 86e2364d..86e2364d 100644
+--- a/CC/src/BoundingBox.cpp
++++ b/CC/src/BoundingBox.cpp
+@@ -19,6 +19,7 @@
+
+ //STL
+ #include <algorithm>
++#include <limits>
+ #include <cstdint>
+
+ using namespace CCLib;
