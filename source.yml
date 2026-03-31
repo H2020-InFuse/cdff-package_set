@@ -115,6 +115,9 @@ version_control:
     - cdff/external/ceres-solver:
       github: ceres-solver/ceres-solver
       tag: 1.14.0
+      patches:
+        - [$AUTOPROJ_SOURCE_DIR/patches/ceres-solver-1.14.0-onetbb-compat.patch, 1]
+        - [$AUTOPROJ_SOURCE_DIR/patches/ceres-solver-1.14.0-suitesparse7-compat.patch, 1]
 
     - infuse/.*:
       github: H2020-InFuse/infuse-$PACKAGE_BASENAME

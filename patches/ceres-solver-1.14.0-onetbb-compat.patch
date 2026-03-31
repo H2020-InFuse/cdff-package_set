@@ -1,0 +1,20 @@
+diff --git a/cmake/FindTBB.cmake b/cmake/FindTBB.cmake
+index d3e28522..3d3ff156 100644
+--- a/cmake/FindTBB.cmake
++++ b/cmake/FindTBB.cmake
+@@ -221,7 +221,14 @@ if(NOT TBB_FOUND)
+   ##################################
+
+   if(TBB_INCLUDE_DIRS)
+-    file(READ "${TBB_INCLUDE_DIRS}/tbb/tbb_stddef.h" _tbb_version_file)
++    # tbb_stddef.h was removed in oneAPI TBB 2021+; fall back to oneapi/tbb/version.h
++    if(EXISTS "${TBB_INCLUDE_DIRS}/tbb/tbb_stddef.h")
++      file(READ "${TBB_INCLUDE_DIRS}/tbb/tbb_stddef.h" _tbb_version_file)
++    elseif(EXISTS "${TBB_INCLUDE_DIRS}/oneapi/tbb/version.h")
++      file(READ "${TBB_INCLUDE_DIRS}/oneapi/tbb/version.h" _tbb_version_file)
++    else()
++      set(_tbb_version_file "")
++    endif()
+     string(REGEX REPLACE ".*#define TBB_VERSION_MAJOR ([0-9]+).*" "\\1"
+             TBB_VERSION_MAJOR "${_tbb_version_file}")
+     string(REGEX REPLACE ".*#define TBB_VERSION_MINOR ([0-9]+).*" "\\1"
