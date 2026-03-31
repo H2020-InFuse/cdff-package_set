@@ -122,6 +122,9 @@ cmake_package "cdff/external/nabo" do |pkg|
     pkg.define 'SHARED_LIBS', 'ON'
     pkg.define 'USE_OPEN_MP', 'OFF'
     pkg.define 'USE_OPEN_CL', 'OFF'
+    pkg.define 'LIBNABO_BUILD_EXAMPLES', 'OFF'
+    pkg.define 'LIBNABO_BUILD_TESTS', 'OFF'
+    pkg.define 'LIBNABO_BUILD_PYTHON', 'OFF'
 end
 
 cmake_package "cdff/external/pointmatcher" do |pkg|

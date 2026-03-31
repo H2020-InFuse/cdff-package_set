@@ -83,14 +83,12 @@ version_control:
       tag: pcl-1.12.1
 
     - cdff/external/nabo:
-      github: ethz-asl/libnabo.git
-      commit: 3b15ebca87bcb242cd3a919929cc301953552197
-      patches:
-        - [$AUTOPROJ_SOURCE_DIR/patches/nabo-1.0.6+git20180418.patch,1]
+      github: norlab-ulaval/libnabo
+      tag: 1.1.2
       
     - cdff/external/pointmatcher:
-      github: ethz-asl/libpointmatcher
-      commit: 591241e360e5c7ce7b4b35b9e99f88b1db521e8b
+      github: norlab-ulaval/libpointmatcher
+      tag: 1.4.4
 
     - cdff/external/cloudcompare-core/CC:
       github: CloudCompare/CloudCompare
