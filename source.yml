@@ -72,7 +72,7 @@ version_control:
       
     - cdff/external/yaml-cpp:
       github: jbeder/yaml-cpp
-      tag: release-0.5.3
+      tag: yaml-cpp-0.7.0
     
     - cdff/external/vtk:
       github: Kitware/vtk
