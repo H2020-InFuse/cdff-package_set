@@ -59,8 +59,8 @@ version_control:
       url: https://archives.boost.io/release/1.66.0/source/boost_1_66_0.tar.gz
       
     - cdff/external/flann:
-      github: mariusmuja/flann
-      tag: 1.9.1
+      github: flann-lib/flann
+      tag: 1.9.2
       
     - cdff/external/qhull:
       github: qhull/qhull
@@ -76,13 +76,11 @@ version_control:
     
     - cdff/external/vtk:
       github: Kitware/vtk
-      tag: v8.1.0
+      tag: v9.3.1
       
     - cdff/external/pcl:
       github: PointCloudLibrary/pcl
-      tag: pcl-1.8.1
-      patches: 
-        - [$AUTOPROJ_SOURCE_DIR/patches/pcl_pkgconfig.patch, 1]
+      tag: pcl-1.12.1
 
     - cdff/external/nabo:
       github: ethz-asl/libnabo.git
