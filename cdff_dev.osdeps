@@ -16,6 +16,16 @@ python3-dev:
     opensuse:
         - python3-dev
 
+qt4:
+    ubuntu:
+        '22.04,24.04': nonexistent
+        default: [libqt4-dev, qt4-qmake]
+
+qt4-opengl:
+    ubuntu:
+        '22.04,24.04': nonexistent
+        default: libqt4-opengl-dev
+
 python3-pyqt4:
     ubuntu:
         '22.04': nonexistent
