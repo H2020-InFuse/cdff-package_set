@@ -141,14 +141,6 @@ version_control:
       tag: v1.9.1
       #url: https://github.com/OGRECave/ogre/archive/v1.9.1.tar.gz
 
-    - cdff/external/visp:
-      github: lagadic/visp
-      tag: "3.1.0"
-
-    - cdff/external/coin3d:
-      type: archive
-      url: https://github.com/coin3d/coin/archive/refs/tags/Coin-3.1.0.tar.gz
-
     - cdff/external/realsense2:
       github: IntelRealSense/librealsense
       tag: "v2.55.1"

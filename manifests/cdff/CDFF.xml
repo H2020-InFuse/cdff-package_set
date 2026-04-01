@@ -13,11 +13,11 @@
   <depend package="vtk" />
   <depend package="slam/pcl" />
   <depend package="curl" />
+  <depend package="visp" />
   <depend package="cdff/external/ceres-solver" />
   <depend package="cdff/external/pointmatcher" />
   <depend package="cdff/external/cloudcompare-core/CC" />
   <depend package="cdff/external/pangolin" />
-  <depend package="cdff/external/visp" />
   <!--<depend package="cdff/external/dem_building" />
   <depend package="cdff/external/gtsam" />
   <depend package="cdff/external/pom_base" />

@@ -15,6 +15,8 @@ boost:
         - boost
         - boost-libs
         
+coin3d:
+  debian,ubuntu: libcoin-dev
         
 opencv:
     debian: libopencv-dev
@@ -76,11 +78,15 @@ vtk:
             - tcl-vtk
             - python-vtk6
             - libvtk-java
-        default:
+        '20.04':
             - libvtk6-dev
             - tcl-vtk6
             - python-vtk6
             - libvtk6-java
+        default:
+            - libvtk9-dev
+            - python3-vtk9
+            - libvtk9-java
     fedora: [ vtk-devel, vtk-tcl, vtk-python, vtk-java ]
     opensuse: [ vtk-devel, vtk-tcl, python-vtk, python-vtk-qt, vtk-java ]
     
@@ -159,3 +165,6 @@ glew:
 
 gsl:
     debian,ubuntu: libgsl-dev
+
+visp:
+    debian,ubuntu: libvisp-dev
