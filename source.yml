@@ -73,16 +73,6 @@ version_control:
     - cdff/external/yaml-cpp:
       github: jbeder/yaml-cpp
       tag: yaml-cpp-0.7.0
-    
-    - cdff/external/vtk:
-      github: Kitware/vtk
-      tag: v9.3.1
-      patches:
-        - [$AUTOPROJ_SOURCE_DIR/patches/vtk-9.3.1-gitignore-build-dir.patch, 1]
-
-    - cdff/external/pcl:
-      github: PointCloudLibrary/pcl
-      tag: pcl-1.12.1
 
     - cdff/external/nabo:
       github: norlab-ulaval/libnabo
