@@ -142,6 +142,8 @@ end
 
 cmake_package "cdff/external/pangolin" do |pkg|
     pkg.define 'CMAKE_BUILD_TYPE', 'Release'
+    pkg.define 'BUILD_PANGOLIN_VIDEO', 'OFF'   # disable FFmpeg/video drivers (FFmpeg 6.x incompatible)
+    pkg.define 'BUILD_EXAMPLES', 'OFF'         # examples reference video functions
 end
 
 cmake_package "cdff/external/realsense2" do |pkg|
