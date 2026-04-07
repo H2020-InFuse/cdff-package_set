@@ -26,6 +26,15 @@ end
 cmake_package "cdff/CDFF" do |pkg|
     pkg.define 'USE_BUNDLED_DEPENDENCIES', 'ON'
     pkg.define 'BUNDLED_DEPENDENCIES_PREFIX', ENV["AUTOPROJ_CURRENT_ROOT"]+"/install"
+    pkg.post_import do
+        # GeneratorScript.sh looks for asn1scc/asn1.exe relative to its own location.
+        # Create a symlink pointing at the autoproj-managed tools/asn1scc checkout.
+        asn1scc_link   = File.join(pkg.srcdir, "Tools", "ASN.1", "asn1scc")
+        asn1scc_target = File.join(ENV["AUTOPROJ_CURRENT_ROOT"], "tools", "asn1scc")
+        unless File.exist?(asn1scc_link) || File.symlink?(asn1scc_link)
+            FileUtils.ln_s(asn1scc_target, asn1scc_link)
+        end
+    end
 end
 
 import_package "cdff/external/boost" do |pkg|
