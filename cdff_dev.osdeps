@@ -54,7 +54,10 @@ libusb:
 
 pyyaml: pip
 jinja2: pip
-cython: pip
+cython:
+    ubuntu:
+        '24.04': cython3
+        default: pip
 numpy: pip
 msgpack-python: pip
 pydot: pip
