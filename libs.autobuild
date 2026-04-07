@@ -228,8 +228,6 @@ def configurable_python_package(name, relative_setup_location: "", &configure)
     end
 end
 
-import_package "cdff/coyote3"
-
 configurable_python_package "cdff/CDFF_dev" do |pkg|
 #    Autoproj.message("pkg: #{pkg}")
 #TODO: why can pkg be nil?

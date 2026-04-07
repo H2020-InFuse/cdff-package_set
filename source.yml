@@ -34,10 +34,6 @@ version_control:
     - cdff/CDFF_dev:
       github: H2020-InFuse/cdff_dev
 
-    - cdff/coyote3:
-      type: git
-      url: https://git.hb.dfki.de/coyote3/cdff-coyote3.git
-
     - tools/asn1scc:
       type: archive
       url: https://github.com/esa/asn1scc/releases/download/3.3.22/asn1scc-bin-3.3.22.tar.bz2
