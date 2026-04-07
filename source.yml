@@ -102,7 +102,7 @@ version_control:
 
     - types/sensor_samples_support:
       github: H2020-InFuse/types-sensor_samples_support
-      branch: types-sensor_samples_support_old
+      branch: master
 
     - cdff/external/ceres-solver:
       github: ceres-solver/ceres-solver
