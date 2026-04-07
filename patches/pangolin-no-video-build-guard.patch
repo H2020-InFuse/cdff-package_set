@@ -1,0 +1,68 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 11b17cb..a36dbd4 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -58,6 +58,8 @@ endif()
+ 
+ option(BUILD_PANGOLIN_VIDEO "Build support for Pangolin Video Utilities" ON)
+ if(BUILD_PANGOLIN_VIDEO)
++  add_definitions(-DBUILD_PANGOLIN_VIDEO)
++
+   # Generic video includes
+   append_glob(HEADERS ${INCDIR}/video/*.h*)
+   append_glob(SOURCES video/*.cpp)
+diff --git a/src/image/image_io.cpp b/src/image/image_io.cpp
+index ce07985..5b49518 100644
+--- a/src/image/image_io.cpp
++++ b/src/image/image_io.cpp
+@@ -28,8 +28,10 @@
+ #include <pangolin/platform.h>
+ 
+ #include <pangolin/image/image_io.h>
++#ifdef BUILD_PANGOLIN_VIDEO
+ #include <pangolin/video/drivers/pango.h>
+ #include <pangolin/video/drivers/pango_video_output.h>
++#endif
+ 
+ #include <algorithm>
+ #include <stdexcept>
+@@ -88,6 +90,7 @@ VideoPixelFormat TgaFormat(int depth, int color_type, int color_map)
+ 
+ 
+ 
++#ifdef BUILD_PANGOLIN_VIDEO
+ TypedImage LoadFromVideo(const std::string& uri)
+ {
+     std::unique_ptr<VideoInterface> video = OpenVideo(uri);
+@@ -124,6 +127,7 @@ void SaveToVideo(const Image<unsigned char>& image, const pangolin::VideoPixelFo
+     video->SetStreams({stream});
+     video->WriteStreams(image.ptr);
+ }
++#endif // BUILD_PANGOLIN_VIDEO
+ 
+ TypedImage LoadTga(const std::string& filename)
+ {
+@@ -597,7 +601,11 @@ TypedImage LoadImage(const std::string& filename, ImageFileType file_type)
+     case ImageFileTypePpm:
+         return LoadPpm(filename);
+     case ImageFileTypePango:
++#ifdef BUILD_PANGOLIN_VIDEO
+         return LoadFromVideo(filename);
++#else
++        throw std::runtime_error("Pangolin video support is disabled; cannot load Pango image: " + filename);
++#endif
+     default:
+         throw std::runtime_error("Unsupported image file type, '" + filename + "'");
+     }
+@@ -637,7 +645,11 @@ void SaveImage(const Image<unsigned char>& image, const pangolin::VideoPixelForm
+     case ImageFileTypeExr:
+         return SaveExr(image, fmt, filename, top_line_first);
+     case ImageFileTypePango:
++#ifdef BUILD_PANGOLIN_VIDEO
+         return SaveToVideo(image, fmt, filename, top_line_first);
++#else
++        throw std::runtime_error("Pangolin video support is disabled; cannot save Pango image: " + filename);
++#endif
+     default:
+         throw std::runtime_error("Unsupported image file type, '" + filename + "'");
+     }
