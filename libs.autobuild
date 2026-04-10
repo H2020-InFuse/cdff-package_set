@@ -219,9 +219,11 @@ def configurable_python_package(name, relative_setup_location: "", &configure)
             if block_given?
                 configure.call
             end
+            venv_folder = ENV.fetch('AUTOPROJ_PYTHONUSERBASE', nil)
+            install_prefix = (venv_folder && !venv_folder.empty?) ? venv_folder : "${AUTOPROJ_CURRENT_ROOT}/install"
             Autobuild::Subprocess.run(
                 pkg, "install",
-                "python3 setup.py install --prefix ${AUTOPROJ_CURRENT_ROOT}/install",
+                "python3 setup.py install --prefix #{install_prefix}",
                 :working_directory => pkg.srcdir + "/" + relative_setup_location)
         end
         yield(pkg) if block_given?
